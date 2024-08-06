@@ -1,0 +1,19 @@
+{
+  "name": "jtautomation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "@types/node": "^20.12.7"
+  },
+  "dependencies": {
+    "csv": "^6.3.9",
+    "exceljs": "^4.4.0",
+    "parse": "^5.0.0"
+  }
+}

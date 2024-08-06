@@ -1,0 +1,15 @@
+{
+    "configurations": [
+        {
+            "type": "node",
+            "name": "debug ForgotPasswordPage.ts",
+            "request": "launch",
+            "args": [],
+            "runtimeArgs": [
+                "-r",
+                "ts-node/register"
+            ],
+            "program": "c:\\Users\\urmz\\Documents\\jobtrain documentations\\JTAutomation\\JTAutomation\\Pages\\ForgotPasswordPage.ts"
+        }
+    ]
+}
