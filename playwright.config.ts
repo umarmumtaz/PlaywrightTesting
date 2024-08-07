@@ -24,7 +24,9 @@ export default defineConfig({
   //open the report always
   //reporter: 'html',
   reporter: [
-    ['html', { open: 'always' }]
+    ['html', { open: 'always' }],
+    //You can use multiple reporters at the same time.
+    ['json', {  outputFile: 'test-results.json' }]
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {

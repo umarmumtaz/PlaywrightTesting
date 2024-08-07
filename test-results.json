@@ -1,0 +1,116 @@
+{
+  "config": {
+    "configFile": "c:\\Users\\urmz\\Documents\\jobtrain documentations\\JTAutomation\\JTAutomation\\playwright.config.ts",
+    "rootDir": "c:/Users/urmz/Documents/jobtrain documentations/JTAutomation/JTAutomation/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        {
+          "open": "always"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "c:/Users/urmz/Documents/jobtrain documentations/JTAutomation/JTAutomation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "c:/Users/urmz/Documents/jobtrain documentations/JTAutomation/JTAutomation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.44.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "Candidate.spec.ts",
+      "file": "Candidate.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Verify the job details values",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "status": "passed",
+                  "duration": 19983,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "expected values are {\n  JobReference: \u001b[32m'000218'\u001b[39m,\n  \u001b[32m'Salary £'\u001b[39m: \u001b[32m'000218'\u001b[39m,\n  \u001b[32m'Closing Date'\u001b[39m: \u001b[32m'31/01/2025'\u001b[39m,\n  Division: getByText('Division:'),\n  \u001b[32m'Hours Per Week'\u001b[39m: getByText('Hours Per Week:'),\n  \u001b[32m'Vacancy Start Date'\u001b[39m: getByText('Vacancy Start Date:')\n}\n"
+                    },
+                    {
+                      "text": "{\n  \u001b[32m'Job Reference:'\u001b[39m: \u001b[33m218\u001b[39m,\n  \u001b[32m'Salary £:'\u001b[39m: \u001b[33m120000\u001b[39m,\n  \u001b[32m'Closing Date:'\u001b[39m: \u001b[32m'31/01/2025'\u001b[39m,\n  \u001b[32m'Division:'\u001b[39m: \u001b[32m'Agency'\u001b[39m,\n  \u001b[32m'Hours Per Week:'\u001b[39m: \u001b[32m'Not Specified564'\u001b[39m\n}\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-08-07T15:35:29.798Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "55befdfe3a84834cf1dc-7db3f661cbbfd80b77d9",
+          "file": "Candidate.spec.ts",
+          "line": 214,
+          "column": 6
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2024-08-07T15:35:24.519Z",
+    "duration": 25785.351999999955,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

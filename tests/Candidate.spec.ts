@@ -6,7 +6,9 @@ import { ForgotPasswordPage } from "../Pages/ForgotPasswordPage.ts";
 import { RegisterPage } from "../Pages/RegisterPage.ts";
 import { HomePage } from "../Pages/HomePage.ts";
 import * as fs from 'fs/promises';
-
+import { readActualValuesFromPage, readExpectedValuesFromExcel, verifyValues } from "../utils/excelUtils2.ts";
+//import { readActualValuesFromPage, readExpectedValuesFromExcel } from "../utils/excelUtils2.ts";
+//import * as XLSX from 'xlsx';
 
 
 test("login with valid email, and password", async ({ page }) => {
@@ -179,7 +181,6 @@ test("Verify all the  the content if no jobs found", async ({ page }) => {
   await homePage2.clickonApplyFilters();
   await homePage2.verifyTextsifNoJobFound();
 });
-
 test("Verify the content if no jobs found", async ({ page }) => {
   const homePage = new LoginPage(page); //class passing the current page object
   await homePage.gotToHomePage();
@@ -188,10 +189,8 @@ test("Verify the content if no jobs found", async ({ page }) => {
   await homePage2.verifyContentIfNoJobsFound("tttttttttttttt");
   await homePage2.clickonApplyFilters();
 await homePage2.verifyTextsifNoJobFound();
-
 });
-
-test.only("Verify the list of the dropdowns", async ({ page }) => {
+test("Verify the list of the dropdowns", async ({ page }) => {
   const homePage = new LoginPage(page); //class passing the current page object
   await homePage.gotToHomePage();
   const homePage2 = new HomePage(page);
@@ -210,8 +209,21 @@ await homePage2.commonValue('#select2-searchFilterDistance-results')
 //verify the date posted
 await page.getByRole('textbox', { name: 'Anytime' }).click();
 const dateListing = await homePage2.commonValue('#select2-searchFilterDate-results')
-
-
 });
 
+test.only("Verify the job details values", async ({ page }) => {
+  const homePage = new LoginPage(page); //class passing the current page object
+  await homePage.gotToHomePage();
+  const homePage2 = new HomePage(page);
+await page.getByRole('link', { name: 'Jobtrain Test job', exact: true }).click()
+//add the assertions for verify the job detail page
+// const expectedValues = readExpectedValuesFromExcel('expectedValues.xlsx');
+// const actualValues = readActualValuesFromPage(page)
+const  expectedValues = await readActualValuesFromPage(page);
+console.log('expected values are' , expectedValues)
+ const actualValues =readExpectedValuesFromExcel("C:\\Users\\urmz\\Documents\\jobtrain documentations\\JTAutomation\\JTAutomation\\jobdetail.xlsx")
+console.log(actualValues)
+ // // Verify the values
+// verifyValues(actualValues, expectedValues);
 
+});
