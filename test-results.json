@@ -75,21 +75,21 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 9,
+                  "workerIndex": 0,
                   "status": "passed",
-                  "duration": 19983,
+                  "duration": 19178,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "expected values are {\n  JobReference: \u001b[32m'000218'\u001b[39m,\n  \u001b[32m'Salary £'\u001b[39m: \u001b[32m'000218'\u001b[39m,\n  \u001b[32m'Closing Date'\u001b[39m: \u001b[32m'31/01/2025'\u001b[39m,\n  Division: getByText('Division:'),\n  \u001b[32m'Hours Per Week'\u001b[39m: getByText('Hours Per Week:'),\n  \u001b[32m'Vacancy Start Date'\u001b[39m: getByText('Vacancy Start Date:')\n}\n"
+                      "text": "expected values are {\n  \u001b[32m'Job Reference'\u001b[39m: \u001b[32m'000218'\u001b[39m,\n  \u001b[32m'Salary £'\u001b[39m: \u001b[32m'000218'\u001b[39m,\n  \u001b[32m'Closing Date'\u001b[39m: \u001b[32m'31/01/2025'\u001b[39m,\n  Division: getByText('Division:'),\n  \u001b[32m'Hours Per Week'\u001b[39m: getByText('Hours Per Week:'),\n  \u001b[32m'Vacancy Start Date'\u001b[39m: getByText('Vacancy Start Date:')\n}\n"
                     },
                     {
-                      "text": "{\n  \u001b[32m'Job Reference:'\u001b[39m: \u001b[33m218\u001b[39m,\n  \u001b[32m'Salary £:'\u001b[39m: \u001b[33m120000\u001b[39m,\n  \u001b[32m'Closing Date:'\u001b[39m: \u001b[32m'31/01/2025'\u001b[39m,\n  \u001b[32m'Division:'\u001b[39m: \u001b[32m'Agency'\u001b[39m,\n  \u001b[32m'Hours Per Week:'\u001b[39m: \u001b[32m'Not Specified564'\u001b[39m\n}\n"
+                      "text": "{\n  \u001b[32m'Job Reference:'\u001b[39m: \u001b[33m218\u001b[39m,\n  \u001b[32m'Salary £:'\u001b[39m: \u001b[33m120000\u001b[39m,\n  \u001b[32m'Closinssg Date:'\u001b[39m: \u001b[32m'31/01/2025'\u001b[39m,\n  \u001b[32m'Divission:'\u001b[39m: \u001b[32m'Agency'\u001b[39m,\n  \u001b[32m'Hours Per Week:'\u001b[39m: \u001b[32m'Not Specified564'\u001b[39m\n}\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-08-07T15:35:29.798Z",
+                  "startTime": "2024-08-08T16:47:14.889Z",
                   "attachments": []
                 }
               ],
@@ -106,8 +106,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-08-07T15:35:24.519Z",
-    "duration": 25785.351999999955,
+    "startTime": "2024-08-08T16:47:11.523Z",
+    "duration": 23795.234999999986,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
