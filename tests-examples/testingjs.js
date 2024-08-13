@@ -123,7 +123,7 @@ console.log(myArr[0])
 
 const myArr2 = new Array('paul', 'walker', 1, 22, 33)
 console.log(myArr2)
-*/
+
 //array methods
 
 const myArr33 = new Array('paul', 'walker', 1, 22, 33)
@@ -150,3 +150,155 @@ console.log(Array.from('umar'))
 
 const score1=100;const score2=200;const score3=300;
 console.log(Array.of(score1, score2, score3))
+
+const sjdf = ['test', 'test', 2]
+console.log(sjdf)
+//console.log(sjdf.length())
+console.log(sjdf[0])
+
+//object singlton and create object construnctor are same
+//objects literal
+const objTest= {
+name: "umar",
+email: "nanncy@gmail.com",
+age: 25,
+gender: "male"
+}
+console.log(objTest)
+console.log(objTest.name)
+console.log(objTest["email"])
+objTest.name ="Umar mumtaz "
+console.log(objTest.name)
+// Object.freeze(objTest)
+// objTest.name ="Umar mumtaz ahmad gull "
+// console.log(objTest.name)
+
+objTest.greeting = function(){
+console.log("hello Umar")
+
+}
+console.log(objTest.age);
+console.log(objTest.greeting());
+//other one with variable
+// objTest.greetingT = function(){
+// console.log(`Hi ${this.name}`)
+
+// }
+// console.log(objTest.greetingT())
+
+// const testUser = new object()//singleton object
+// console.log(testUser)
+// const tinderUser2={} //non singleton object
+// console.log(tinderUser2)
+const testingUser = {}
+testingUser.id =321,
+testingUser.name='nanncy',
+testingUser.status='single'
+testingUser.citizin=false
+
+const testingUser2 = {
+email: "kevinpaul@gmail.com",
+
+fullname: {
+firstname: "kevin",
+lastname:  "nanncy",
+}
+}
+console.log(testingUser.id)
+console.log(testingUser2.email)
+console.log(testingUser2.fullname.firstname)
+const objectCombine = {testingUser, testingUser2}
+console.log(objectCombine)
+
+//---------------------
+const obj11 ={v1:'nanncy', v2:'kevin', v3:41010 }
+const obj22={t1: 'paul', t2:'walker',t3: 'abc'}
+const obj33 = {...obj11, ...obj22}
+console.log(obj33)    
+console.log(Object.keys(obj33))
+console.log(Object.values(obj33))
+console.log(Object.entries(obj33))
+console.log(obj33.hasOwnProperty('v1'))
+
+
+
+const person={
+name: 'nanncy',
+age: 30,
+gender: 'female',
+status: 'single',
+
+//console.log(person)
+
+ fullName: function(kk){
+return this.name + kk;
+}
+}
+console.log(person.fullName('kevin'))
+
+console.log(person.status)
+
+
+
+
+const objTest= {
+  name: "umar",
+  email: "nanncy@gmail.com",
+  age: 25,
+  gender: "male"
+  }
+//   console.log(objTest)
+//   console.log(objTest.name)
+//   console.log(objTest["email"])
+//   //objTest.name ="Umar mumtaz "
+//   //console.log(objTest.name)
+
+  
+  objTest.greeting = function(){
+  console.log("hello Umar")
+  return 'test';
+  }
+  console.log(objTest.age);
+  console.log (objTest.greeting());
+
+
+
+  
+ const person={
+name: 'nanncy',
+age: 30,
+gender: 'female',
+status: 'single',
+
+//console.log(person)
+
+ fullName: function(){
+return this.name
+},
+nameAge : (n)=>{console.log(n + "and age is  "+ person.age)}
+}
+
+person.email="jhsdfkjhd@gamil.com"
+person["emmmail"]="sdklfjks@emmmail.com"
+
+// person.nameAge = (n)=>{console.log(n + "and age is  "+ person.age)
+// }
+
+//  console.log(person.emmmail)
+//  console.log(person["emmmail"])
+
+person.nameAge("nanccy")
+
+//destructring
+const courses = {
+course1: 'maths',
+course2: 'stats',
+course3:'eco',
+course4: 'eng'
+}
+const{course1} =courses
+console.log(course1)
+const{course2: aa} =courses
+console.log(aa)
+
+*/

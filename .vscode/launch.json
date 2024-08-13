@@ -10,6 +10,13 @@
                 "ts-node/register"
             ],
             "program": "c:\\Users\\urmz\\Documents\\jobtrain documentations\\JTAutomation\\JTAutomation\\Pages\\ForgotPasswordPage.ts"
+        },
+        {
+            "type": "node",
+            "name": "debug testingjs.js",
+            "request": "launch",
+            "args": [],
+            "program": "c:\\Users\\urmz\\Documents\\jobtrain documentations\\JTAutomation\\JTAutomation\\tests-examples\\testingjs.js"
         }
     ]
 }
