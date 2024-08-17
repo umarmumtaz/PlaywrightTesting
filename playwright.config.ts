@@ -37,7 +37,7 @@ export default defineConfig({
     screenshot:"on",
     //run in slowmotion
     launchOptions: {
-      slowMo: 2000
+      slowMo: 4000
     },
     //video:"on",
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
