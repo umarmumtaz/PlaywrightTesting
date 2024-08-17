@@ -301,4 +301,100 @@ console.log(course1)
 const{course2: aa} =courses
 console.log(aa)
 
+
+//functions
+// function abc1(){
+// console.log('my first function')
+// } abc1() //simple
+
+// function addnumbers(num1, num2){
+// console.log(num1 + num2);
+
+// }
+// return addnumbers(5, 9)
+
+
+// function addition(a,b){
+// return a+b;
+
+// }
+// const add = addition(9,7)
+// console.log(add)
+
+function login(username){
+return (`my name is ${username}`)
+}
+const myloginName = login('umar')
+console.log(myloginName)
+
+function login2(username='sdf'){
+if(username ===undefined){
+  console.log("please enter username")
+  return
+}else{
+
+
+  return (`my name is ${username}`)
+  }}
+ console.log(login2())
+
+
+function logintosystem(username){
+if(username ===undefined)
+  {
+console.log("user is not here")
+return 
+}else{
+  return (`Username is  ${username}` )
+} }
+console.log(logintosystem("ab devillers"))
+
+
+
+function addnumbers(num1, num2){
+console.log(num1 + num2);
+
+}
+return addnumbers(5, 9);
+//discuss
+
+function addnum(a, m){
+return (a+m)
+} 
+console.log(addnum(7,3))
+
+
+//simple vs arrow function
+function testi(username)
+{
+return(username)
+}
+console.log(testi("nanncy"))
+//arrow function
+const additions =(a,b) =>{
+return(a+b)
+}
+console.log(additions(7,9))
+//arrow funciton with diff style implicit
+const add2=(aa,bb)=> aa+bb
+console.log(add2(7,1))
+// with object
+const objobjectfunc = (az, bz) => ({usernames: 'nanncy'})
+console.log(objobjectfunc(9,3))
+
 */
+//invoke function
+(function invotest(){
+console.log('our output')
+})()
+
+//with arrow function
+
+const add2=(aa,bb)  => aa+bb
+
+console.log(add2(7,1))
+
+const add3=(aa,bb)  => {
+  return (aa+bb)
+}
+console.log(add3(7,8))

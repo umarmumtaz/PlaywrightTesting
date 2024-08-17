@@ -3,7 +3,7 @@ import { Page, BrowserContext } from "playwright";
 
 class HomePage {
   constructor(public page: Page) {
-
+this.page=page;
   }
   async verifyTheHomePageTitle() {
     const HomePageTitle = this.page.locator('.h3.jt-page-title');

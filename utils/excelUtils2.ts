@@ -56,7 +56,7 @@
 //     }
 //   }
 // };
-
+/*
 import { chromium, Page } from 'playwright';
 import * as XLSX from 'xlsx';
 import * as fs from 'fs';
@@ -83,9 +83,9 @@ export const  readActualValuesFromPage = async (page: Page) => {
     const jobReference = await page.textContent('text=218');
     const salary = await page.textContent('text=000');
     const closingDate = await page.textContent('text=2025');
-    const division = await page.getByText('Division:');
-    const hoursPerWeek = await page.getByText('Hours Per Week:');
-    const vacancyStartDate = await page.getByText('Vacancy Start Date:');
+    const division = await page.textContent('text=Agency');
+    const hoursPerWeek = await page.textContent('text=Not Specified');
+    const vacancyStartDate = await page.textContent('text=');
   
     return {
       'Job Reference': jobReference,//.trim() || '',
@@ -109,6 +109,17 @@ export const  readActualValuesFromPage = async (page: Page) => {
     }
   };
 
+*/
 
-  //compare values are pending
-  //any other logic on reading the texts on the job details
+
+
+import * as xlsx from 'xlsx';
+
+export const readExpectedValuesFromExcel = (filePath: string, sheetName: string) => {
+    const workbook = xlsx.readFile(filePath);
+    const sheet = workbook.Sheets[sheetName];
+    const data = xlsx.utils.sheet_to_json(sheet);
+
+    // Assuming your Excel sheet has headers matching the keys used in `readActualValuesFromPage`
+    return data[0]; // Returns the first row of the Excel sheet as an object
+};
