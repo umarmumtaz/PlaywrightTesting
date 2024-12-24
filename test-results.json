@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "c:\\Users\\urmz\\Documents\\jobtrain documentations\\JTAutomation\\JTAutomation\\playwright.config.ts",
-    "rootDir": "c:/Users/urmz/Documents/jobtrain documentations/JTAutomation/JTAutomation/tests",
+    "configFile": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\playwright.config.ts",
+    "rootDir": "D:/PlaywrightAutomation/JTAutomationLocalCS/tests",
     "forbidOnly": false,
     "fullyParallel": true,
     "globalSetup": null,
@@ -35,82 +35,99 @@
     "quiet": false,
     "projects": [
       {
-        "outputDir": "c:/Users/urmz/Documents/jobtrain documentations/JTAutomation/JTAutomation/test-results",
+        "outputDir": "D:/PlaywrightAutomation/JTAutomationLocalCS/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {},
         "id": "chromium",
         "name": "chromium",
-        "testDir": "c:/Users/urmz/Documents/jobtrain documentations/JTAutomation/JTAutomation/tests",
+        "testDir": "D:/PlaywrightAutomation/JTAutomationLocalCS/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
-        "timeout": 30000
+        "timeout": 90000
       }
     ],
     "shard": null,
     "updateSnapshots": "missing",
-    "version": "1.44.0",
+    "version": "1.44.1",
     "workers": 1,
     "webServer": null
   },
   "suites": [
     {
-      "title": "Candidate.spec.ts",
-      "file": "Candidate.spec.ts",
+      "title": "SavedJobs.spec.ts",
+      "file": "SavedJobs.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Verify the job details values",
-          "ok": true,
+          "title": "Veiw and remove the saved job",
+          "ok": false,
           "tags": [],
           "tests": [
             {
-              "timeout": 30000,
+              "timeout": 90000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "chromium",
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 19178,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "expected values are {\n  \u001b[32m'Job Reference'\u001b[39m: \u001b[32m'000218'\u001b[39m,\n  \u001b[32m'Salary £'\u001b[39m: \u001b[32m'000218'\u001b[39m,\n  \u001b[32m'Closing Date'\u001b[39m: \u001b[32m'31/01/2025'\u001b[39m,\n  Division: getByText('Division:'),\n  \u001b[32m'Hours Per Week'\u001b[39m: getByText('Hours Per Week:'),\n  \u001b[32m'Vacancy Start Date'\u001b[39m: getByText('Vacancy Start Date:')\n}\n"
+                  "workerIndex": 49,
+                  "status": "failed",
+                  "duration": 16064,
+                  "error": {
+                    "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n  \u001b[2m- waiting for getByLabel('View').nth(1)\u001b[22m\n",
+                    "stack": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n  \u001b[2m- waiting for getByLabel('View').nth(1)\u001b[22m\n\n    at SavedJobs.clickOnViewSavedJob (D:\\PlaywrightAutomation\\JTAutomationLocalCS\\Pages\\SavedJobs.ts:20:43)\n    at D:\\PlaywrightAutomation\\JTAutomationLocalCS\\tests\\SavedJobs.spec.ts:48:25",
+                    "location": {
+                      "file": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\Pages\\SavedJobs.ts",
+                      "column": 43,
+                      "line": 20
                     },
+                    "snippet": "\u001b[90m   at \u001b[39m..\\Pages\\SavedJobs.ts:20\n\n\u001b[0m \u001b[90m 18 |\u001b[39m\n \u001b[90m 19 |\u001b[39m \u001b[36masync\u001b[39m clickOnViewSavedJob(){\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'View'\u001b[39m)\u001b[33m.\u001b[39mnth(\u001b[35m1\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'a-back-to-link'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m\n \u001b[90m 23 |\u001b[39m }\u001b[0m"
+                  },
+                  "errors": [
                     {
-                      "text": "{\n  \u001b[32m'Job Reference:'\u001b[39m: \u001b[33m218\u001b[39m,\n  \u001b[32m'Salary £:'\u001b[39m: \u001b[33m120000\u001b[39m,\n  \u001b[32m'Closinssg Date:'\u001b[39m: \u001b[32m'31/01/2025'\u001b[39m,\n  \u001b[32m'Divission:'\u001b[39m: \u001b[32m'Agency'\u001b[39m,\n  \u001b[32m'Hours Per Week:'\u001b[39m: \u001b[32m'Not Specified564'\u001b[39m\n}\n"
+                      "location": {
+                        "file": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\Pages\\SavedJobs.ts",
+                        "column": 43,
+                        "line": 20
+                      },
+                      "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n  \u001b[2m- waiting for getByLabel('View').nth(1)\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\Pages\\SavedJobs.ts:20\n\n\u001b[0m \u001b[90m 18 |\u001b[39m\n \u001b[90m 19 |\u001b[39m \u001b[36masync\u001b[39m clickOnViewSavedJob(){\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'View'\u001b[39m)\u001b[33m.\u001b[39mnth(\u001b[35m1\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'a-back-to-link'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m\n \u001b[90m 23 |\u001b[39m }\u001b[0m\n\n\u001b[2m    at SavedJobs.clickOnViewSavedJob (D:\\PlaywrightAutomation\\JTAutomationLocalCS\\Pages\\SavedJobs.ts:20:43)\u001b[22m\n\u001b[2m    at D:\\PlaywrightAutomation\\JTAutomationLocalCS\\tests\\SavedJobs.spec.ts:48:25\u001b[22m"
                     }
                   ],
+                  "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-08-08T16:47:14.889Z",
-                  "attachments": []
+                  "startTime": "2024-12-24T10:32:14.560Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\Pages\\SavedJobs.ts",
+                    "column": 43,
+                    "line": 20
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
-          "id": "55befdfe3a84834cf1dc-7db3f661cbbfd80b77d9",
-          "file": "Candidate.spec.ts",
-          "line": 214,
-          "column": 6
+          "id": "6eef304fc43add82469b-e6807cf1ab71a71d209d",
+          "file": "SavedJobs.spec.ts",
+          "line": 44,
+          "column": 9
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-08-08T16:47:11.523Z",
-    "duration": 23795.234999999986,
-    "expected": 1,
+    "startTime": "2024-12-24T10:32:11.891Z",
+    "duration": 18850.81700000167,
+    "expected": 0,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }

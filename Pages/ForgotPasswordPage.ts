@@ -10,13 +10,13 @@ class ForgotPasswordPage {
     }
 
     async clickOnRecoverPasswordButton() {
-        await this.page.getByTestId('RecoverPassword').click();
+        await this.page.getByTestId('btn-recover-password').click();
     }
 
     async goToRecoverPasswordUrl() {
 
 
-        await this.page.goto('https://test.jobtrain.co.uk/ybscareers/LostUserAccount/RecoverUserNamePassword')
+        await this.page.goto('http://live.jobtrain.com:2022/LostUserAccount/RecoverUserNamePassword')
     }
 
 
@@ -29,11 +29,11 @@ async resetPasswordContent(){
 }
 
 async resetPasswordConfirmation(){
-    const confirmationScreenHeading = await this.page.locator(".text-primary").textContent();
-    await expect(this.page.locator(".text-primary")).toContainText("Confirmation Sent");
+    const confirmationScreenHeading = await this.page.getByTestId('h1-Confirmation Sent').textContent();
+    await expect(this.page.getByTestId('h1-Confirmation Sent')).toContainText("Confirmation Sent");
     console.log(confirmationScreenHeading);
     await expect(this.page).toHaveURL(
-        "https://test.jobtrain.co.uk/ybscareers/LostUserAccount/ResetPasswordConfirmation");
+        "http://live.jobtrain.com:2022/LostUserAccount/ResetPasswordConfirmation");
 }
 async resetPasswordErrorMessage(){
 
@@ -43,7 +43,12 @@ async resetPasswordErrorMessage(){
     console.log(warningMesageRP);
 }
 
+async verifyTheResetPasswordPageContent(){
+    const resetPasswordHeading =  this.page.locator(".register__title");
+    const getPasswordHeading =  expect(resetPasswordHeading).toHaveText("Reset Password");
+    expect(resetPasswordHeading).toBeTruthy();
 
+}
 
 }
 

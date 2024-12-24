@@ -1,0 +1,35 @@
+{
+  "cookies": [
+    {
+      "name": "jt.candidate.Session_2",
+      "value": "CfDJ8MdOUUr5gTRIl6EsUndDqG3T07xLToE1%2FezaR1KFGJkjZNTXTY4LZMZrQs6SnXl6hE%2Bq6e%2BBHLVHXQuqLMu9P1yWFxkDX4WbwkJF3BGRbldcNDsUrUvkC%2BfKisFf0oNAYBq8XpIosb6tzKuEp0YtSHlMlBFis8My9GM%2BSe0Wd0xC",
+      "domain": "live.jobtrain.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": ".AspNetCore.Antiforgery.N-oxYxPQjJk",
+      "value": "CfDJ8MdOUUr5gTRIl6EsUndDqG01JuU4Kh0VjQhpO8i1LA63nJpe0rlg6OJG2adbWpzb-UtmHh3Viz3AiD3jShIPsrx7O8eSDNdI0F3GZjHatEO8xOaca_pnuUP0yPqF_WhFkvTtldMrAegAksoDBW8IFI8",
+      "domain": "live.jobtrain.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Strict"
+    },
+    {
+      "name": ".AspNetCore.Mvc.CookieTempDataProvider",
+      "value": "CfDJ8MdOUUr5gTRIl6EsUndDqG2Mgr0IZ6TNDv-HrO7g1rhK7agVZo-TZPPLrE28xtAmJc-EGpvCScwD__Ymtpx-9J6pPQEPbj-hTuo9LKaP5abYtHFWckuadQa-gQseD6tktZ6alIf_GhQuwll16a2rU7g",
+      "domain": "live.jobtrain.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": []
+}

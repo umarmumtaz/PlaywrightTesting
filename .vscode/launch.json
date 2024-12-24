@@ -17,6 +17,39 @@
             "request": "launch",
             "args": [],
             "program": "c:\\Users\\urmz\\Documents\\jobtrain documentations\\JTAutomation\\JTAutomation\\tests-examples\\testingjs.js"
+        },
+        {
+            "type": "node",
+            "name": "debug Candidate.spec.ts",
+            "request": "launch",
+            "args": [],
+            "runtimeArgs": [
+                "-r",
+                "ts-node/register"
+            ],
+            "program": "c:\\Users\\urmz\\Documents\\jobtrain documentations\\JTAutomation\\JTAutomation\\tests\\Candidate.spec.ts"
+        },
+        {
+            "type": "node",
+            "name": "debug Register.spec.ts",
+            "request": "launch",
+            "args": [],
+            "runtimeArgs": [
+                "-r",
+                "ts-node/register"
+            ],
+            "program": "c:\\Users\\urmz\\Documents\\CSlocalbeta\\JTAutomation\\tests\\Register.spec.ts"
+        },
+        {
+            "type": "node",
+            "name": "debug SavedJobs.spec.ts",
+            "request": "launch",
+            "args": [],
+            "runtimeArgs": [
+                "-r",
+                "ts-node/register"
+            ],
+            "program": "d:\\PlaywrightAutomation\\JTAutomationLocalCS\\tests\\SavedJobs.spec.ts"
         }
     ]
 }

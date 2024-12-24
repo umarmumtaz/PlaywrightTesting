@@ -1,15 +1,6 @@
 import { expect } from "@playwright/test";
 import { Page, BrowserContext } from "playwright";
 
-// interface JobDetailsInter {
-//     'Job Reference': string;
-//     'Salary £': string;
-//     'Closing Date': string;
-//     'Division': string;
-//     'Hours Per Week': string;
-//     'Vacancy Start Date': string;
-// }
-
 class JobDetails {
   constructor(public page: Page) {}
 

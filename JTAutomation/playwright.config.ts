@@ -18,34 +18,15 @@ export default defineConfig({
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
-  // workers: process.env.CI ? 1 : undefined,  //commented
+  workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  // playwright.config.ts
-  workers: 1,
-  timeout: 90000, // Set global timeout to 60 seconds
-
-
-  //open the report always
-  //reporter: 'html',
-  reporter: [
-    ['html', { open: 'always' }],
-    //You can use multiple reporters at the same time.
-    ['json', {  outputFile: 'test-results.json' }]
-  ],
+  reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
-    baseURL: 'http://live.jobtrain.com:2022/',// we can add the base url, and just add the path in the code
-    
-   // testIdAttribute: 'id',
+    // baseURL: 'http://127.0.0.1:3000', we can add the base url, and just add the path in the code
+    testIdAttribute: 'id',
     headless: true, //its used to work as an headless
-    screenshot:"on",
-    //run in slowmotion
-    launchOptions: {
-      slowMo: 500
-      
-    },
-    //video:"on",
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
   },
@@ -56,7 +37,6 @@ export default defineConfig({
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },
-  
     /*
         {
           name: 'firefox',
@@ -92,7 +72,7 @@ export default defineConfig({
   /* Run your local dev server before starting the tests */
   // webServer: {
   //   command: 'npm run start',
-  //   url: 'http://127.0.0.1:9323',
+  //   url: 'http://127.0.0.1:3000',
   //   reuseExistingServer: !process.env.CI,
   // },
 });
