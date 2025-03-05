@@ -6,7 +6,7 @@ import { LoginPage } from "../Pages/LoginPage.ts";
 
 
 test.describe('Run All Login Test Cases', () =>{
-//test beforeall pre conditions
+//test before all pre conditions of the TCs
 test("login with valid email, and password", async ({ page }) => {
   const loginPage = new LoginPage(page);
   await loginPage.gotToHomePage();
