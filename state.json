@@ -1,8 +1,8 @@
 {
   "cookies": [
     {
-      "name": "jt.candidate.Session_1",
-      "value": "CfDJ8AQDAGOfEaxKkeY72IqcIdFTTZsdl%2FwZoIhWs62fnOK4a%2BxUMo2a8Pb%2BFDWHh378MBV0MlkfA0axmro5XCOou9D5Es2Hbn6Zd7pF6s4HNcKSfPZJ2Zal1lhjili4HvSj3IMOynuJlYQBxOHKkAs3fO5K9JpNh%2FwroKJGmQPcY1pq",
+      "name": "jt.candidate.Session_2",
+      "value": "CfDJ8AQDAGOfEaxKkeY72IqcIdE2CZYI2O15jXAa6i%2FQbDap%2B%2FY%2BgMvwv%2FMG9JOMg76RF5Bhivr2M5%2F7crq4oJcqwbqc4y159F5vEFQRFWEEdEANb4yhGi%2BdigKjvHcQKsP7TmbR8%2F9js0DjpYYzLhXY1clj%2FQd9dVjBOyA4doiMEcmf",
       "domain": "live.jobtrain.com",
       "path": "/",
       "expires": -1,
@@ -12,7 +12,7 @@
     },
     {
       "name": ".AspNetCore.Antiforgery.N-oxYxPQjJk",
-      "value": "CfDJ8AQDAGOfEaxKkeY72IqcIdGFLRUUyiS8LPm6-4W7XVQ9FpbZnpdDywON1ayP6Rj9h8edAApQjHS4h0gcjJ28nVahWFC707ibXekrbXFB5trRkaQInwW3RjF7cXfAua90BQdT1NtLCFYc22sPGNl9lAE",
+      "value": "CfDJ8AQDAGOfEaxKkeY72IqcIdEOkSAAFiMhGtv9gbNGWwBofOACt63MsTKZK5EQHD8tTGMClXTH_tVFQMZZUIIx3wCpT8LCck-pt3aLNxmu9GvuG31B0h8CcsEWjFIkHNdroKj-jviXn6eJZft4oSIXGBE",
       "domain": "live.jobtrain.com",
       "path": "/",
       "expires": -1,

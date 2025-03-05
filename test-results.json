@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "c:\\Users\\urmz\\Documents\\jobtrain documentations\\JTAutomation\\JTAutomation\\playwright.config.ts",
-    "rootDir": "c:/Users/urmz/Documents/jobtrain documentations/JTAutomation/JTAutomation/tests",
+    "configFile": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\playwright.config.ts",
+    "rootDir": "D:/PlaywrightAutomation/JTAutomationLocalCS/tests",
     "forbidOnly": false,
     "fullyParallel": true,
     "globalSetup": null,
@@ -35,13 +35,13 @@
     "quiet": false,
     "projects": [
       {
-        "outputDir": "c:/Users/urmz/Documents/jobtrain documentations/JTAutomation/JTAutomation/test-results",
+        "outputDir": "D:/PlaywrightAutomation/JTAutomationLocalCS/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {},
         "id": "chromium",
         "name": "chromium",
-        "testDir": "c:/Users/urmz/Documents/jobtrain documentations/JTAutomation/JTAutomation/tests",
+        "testDir": "D:/PlaywrightAutomation/JTAutomationLocalCS/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -51,66 +51,170 @@
     ],
     "shard": null,
     "updateSnapshots": "missing",
-    "version": "1.44.0",
+    "version": "1.44.1",
     "workers": 1,
     "webServer": null
   },
   "suites": [
     {
-      "title": "Register.spec.ts",
-      "file": "Register.spec.ts",
+      "title": "Login.spec.ts",
+      "file": "Login.spec.ts",
       "column": 0,
       "line": 0,
-      "specs": [
+      "specs": [],
+      "suites": [
         {
-          "title": "Verify the job details values",
-          "ok": true,
-          "tags": [],
-          "tests": [
+          "title": "Run All Login Test Cases",
+          "file": "Login.spec.ts",
+          "line": 8,
+          "column": 6,
+          "specs": [
             {
-              "timeout": 90000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
+              "title": "login with valid email, and password",
+              "ok": true,
+              "tags": [],
+              "tests": [
                 {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 19178,
-                  "errors": [],
-                  "stdout": [
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
                     {
-                      "text": "expected values are {\n  \u001b[32m'Job Reference'\u001b[39m: \u001b[32m'000218'\u001b[39m,\n  \u001b[32m'Salary £'\u001b[39m: \u001b[32m'000218'\u001b[39m,\n  \u001b[32m'Closing Date'\u001b[39m: \u001b[32m'31/01/2025'\u001b[39m,\n  Division: getByText('Division:'),\n  \u001b[32m'Hours Per Week'\u001b[39m: getByText('Hours Per Week:'),\n  \u001b[32m'Vacancy Start Date'\u001b[39m: getByText('Vacancy Start Date:')\n}\n"
-                    },
-                    {
-                      "text": "{\n  \u001b[32m'Job Reference:'\u001b[39m: \u001b[33m218\u001b[39m,\n  \u001b[32m'Salary £:'\u001b[39m: \u001b[33m120000\u001b[39m,\n  \u001b[32m'Closinssg Date:'\u001b[39m: \u001b[32m'31/01/2025'\u001b[39m,\n  \u001b[32m'Divission:'\u001b[39m: \u001b[32m'Agency'\u001b[39m,\n  \u001b[32m'Hours Per Week:'\u001b[39m: \u001b[32m'Not Specified564'\u001b[39m\n}\n"
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 14357,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Email goes here\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-03-05T16:20:16.193Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\test-results\\Login-Run-All-Login-Test-C-0d064-th-valid-email-and-password-chromium\\test-finished-1.png"
+                        }
+                      ]
                     }
                   ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-08-08T16:47:14.889Z",
-                  "attachments": []
+                  "status": "expected"
                 }
               ],
-              "status": "expected"
+              "id": "42af536f2c838a173cb6-7f5b66ead4d73ba40718",
+              "file": "Login.spec.ts",
+              "line": 10,
+              "column": 5
+            },
+            {
+              "title": "login with invalid email, and password",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 10829,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "infoInvalid UserName Or Password.\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-03-05T16:20:30.750Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\test-results\\Login-Run-All-Login-Test-C-e66ee--invalid-email-and-password-chromium\\test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "42af536f2c838a173cb6-ee08105e76c30ea26c94",
+              "file": "Login.spec.ts",
+              "line": 23,
+              "column": 5
+            },
+            {
+              "title": "login without email, and password",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "failed",
+                      "duration": 10746,
+                      "error": {
+                        "message": "Error: \"context\" and \"page\" fixtures are not supported in \"afterAll\" since they are created on a per-test basis.\nIf you would like to reuse a single page between tests, create context manually with browser.newContext(). See https://aka.ms/playwright/reuse-page for details.\nIf you would like to configure your page before each test, do that in beforeEach hook instead.",
+                        "stack": "Error: \"context\" and \"page\" fixtures are not supported in \"afterAll\" since they are created on a per-test basis.\nIf you would like to reuse a single page between tests, create context manually with browser.newContext(). See https://aka.ms/playwright/reuse-page for details.\nIf you would like to configure your page before each test, do that in beforeEach hook instead."
+                      },
+                      "errors": [
+                        {
+                          "message": "Error: \"context\" and \"page\" fixtures are not supported in \"afterAll\" since they are created on a per-test basis.\nIf you would like to reuse a single page between tests, create context manually with browser.newContext(). See https://aka.ms/playwright/reuse-page for details.\nIf you would like to configure your page before each test, do that in beforeEach hook instead."
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "infoInvalid UserName Or Password.\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-03-05T16:20:41.583Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\test-results\\Login-Run-All-Login-Test-C-21c52--without-email-and-password-chromium\\test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "42af536f2c838a173cb6-25c2e086d259d0c4af9e",
+              "file": "Login.spec.ts",
+              "line": 32,
+              "column": 5
             }
-          ],
-          "id": "55befdfe3a84834cf1dc-7db3f661cbbfd80b77d9",
-          "file": "Candidate.spec.ts",
-          "line": 214,
-          "column": 6
+          ]
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-08-08T16:47:11.523Z",
-    "duration": 23795.234999999986,
-    "expected": 1,
-    "skipped": 1,
-    "unexpected": 0,
+    "startTime": "2025-03-05T16:20:15.090Z",
+    "duration": 37309.805,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }

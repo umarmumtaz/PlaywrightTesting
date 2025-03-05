@@ -4,27 +4,10 @@ import { test, expect, BrowserContext, chromium } from "@playwright/test";
 import { LoginPage } from "../Pages/LoginPage.ts";
 // LambdaTest capabilities
 
-const capabilities = {
-  browserName: "Chrome", // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
-  browserVersion: "latest",
-  "LT:Options": {
-    platform: "Windows 11",
-    build: "Playwright  test Build",
-    name: "Playwright Test",
-    user: "usmiahmi",
-    accessKey: "LT_Rr0lBjYJzBhAUHUQ8OXtptwgLZW9DCjau5JwZxJGYrBB2Za",
-    network: true,
-    video: true,
-    console: true,
-    tunnel: false, // Add tunnel configuration if testing locally hosted webpage
-    tunnelName: "", // Optional
-    geoLocation: "", // country code can be fetched from https://www.lambdatest.com/capabilities-generator/
-  },
-};
+
 test.describe('Run All Login Test Cases', () =>{
 //test beforeall pre conditions
 test("login with valid email, and password", async ({ page }) => {
-  const browser =await chromium.connect('wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`');
   const loginPage = new LoginPage(page);
   await loginPage.gotToHomePage();
   await loginPage.clickOnSignInButton();

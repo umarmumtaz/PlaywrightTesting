@@ -17,6 +17,17 @@
             "request": "launch",
             "args": [],
             "program": "c:\\Users\\urmz\\Documents\\jobtrain documentations\\JTAutomation\\JTAutomation\\tests-examples\\testingjs.js"
+        },
+        {
+            "type": "node",
+            "name": "debug Login.spec.ts",
+            "request": "launch",
+            "args": [],
+            "runtimeArgs": [
+                "-r",
+                "ts-node/register"
+            ],
+            "program": "d:\\PlaywrightAutomation\\JTAutomationLocalCS\\tests\\Login.spec.ts"
         }
     ]
 }
