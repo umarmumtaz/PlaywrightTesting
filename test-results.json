@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\playwright.config.ts",
-    "rootDir": "D:/PlaywrightAutomation/JTAutomationLocalCS/tests",
+    "configFile": "c:\\Users\\urmz\\Documents\\jobtrain documentations\\JTAutomation\\JTAutomation\\playwright.config.ts",
+    "rootDir": "c:/Users/urmz/Documents/jobtrain documentations/JTAutomation/JTAutomation/tests",
     "forbidOnly": false,
     "fullyParallel": true,
     "globalSetup": null,
@@ -35,13 +35,13 @@
     "quiet": false,
     "projects": [
       {
-        "outputDir": "D:/PlaywrightAutomation/JTAutomationLocalCS/test-results",
+        "outputDir": "c:/Users/urmz/Documents/jobtrain documentations/JTAutomation/JTAutomation/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {},
         "id": "chromium",
         "name": "chromium",
-        "testDir": "D:/PlaywrightAutomation/JTAutomationLocalCS/tests",
+        "testDir": "c:/Users/urmz/Documents/jobtrain documentations/JTAutomation/JTAutomation/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -51,7 +51,7 @@
     ],
     "shard": null,
     "updateSnapshots": "missing",
-    "version": "1.44.1",
+    "version": "1.44.0",
     "workers": 1,
     "webServer": null
   },
@@ -63,7 +63,7 @@
       "line": 0,
       "specs": [
         {
-          "title": "Register an Account Process final",
+          "title": "Verify the job details values",
           "ok": true,
           "tags": [],
           "tests": [
@@ -77,76 +77,37 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 13312,
+                  "duration": 19178,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "\n                             Now, let's  get started\n                        \n"
+                      "text": "expected values are {\n  \u001b[32m'Job Reference'\u001b[39m: \u001b[32m'000218'\u001b[39m,\n  \u001b[32m'Salary £'\u001b[39m: \u001b[32m'000218'\u001b[39m,\n  \u001b[32m'Closing Date'\u001b[39m: \u001b[32m'31/01/2025'\u001b[39m,\n  Division: getByText('Division:'),\n  \u001b[32m'Hours Per Week'\u001b[39m: getByText('Hours Per Week:'),\n  \u001b[32m'Vacancy Start Date'\u001b[39m: getByText('Vacancy Start Date:')\n}\n"
+                    },
+                    {
+                      "text": "{\n  \u001b[32m'Job Reference:'\u001b[39m: \u001b[33m218\u001b[39m,\n  \u001b[32m'Salary £:'\u001b[39m: \u001b[33m120000\u001b[39m,\n  \u001b[32m'Closinssg Date:'\u001b[39m: \u001b[32m'31/01/2025'\u001b[39m,\n  \u001b[32m'Divission:'\u001b[39m: \u001b[32m'Agency'\u001b[39m,\n  \u001b[32m'Hours Per Week:'\u001b[39m: \u001b[32m'Not Specified564'\u001b[39m\n}\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-03-05T12:06:07.961Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\test-results\\Register-Register-an-Account-Process-final-chromium\\test-finished-1.png"
-                    }
-                  ]
+                  "startTime": "2024-08-08T16:47:14.889Z",
+                  "attachments": []
                 }
               ],
               "status": "expected"
             }
           ],
-          "id": "cb5eb002671cd6c64a58-95b27ae6c5374ac9fa3b",
-          "file": "Register.spec.ts",
-          "line": 16,
-          "column": 5
-        },
-        {
-          "title": "logout test",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 90000,
-              "annotations": [
-                {
-                  "type": "skip"
-                }
-              ],
-              "expectedStatus": "skipped",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": -1,
-                  "status": "skipped",
-                  "duration": 0,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-03-05T12:06:22.532Z",
-                  "attachments": []
-                }
-              ],
-              "status": "skipped"
-            }
-          ],
-          "id": "cb5eb002671cd6c64a58-42283d03d7c9d89542c2",
-          "file": "Register.spec.ts",
-          "line": 59,
-          "column": 8
+          "id": "55befdfe3a84834cf1dc-7db3f661cbbfd80b77d9",
+          "file": "Candidate.spec.ts",
+          "line": 214,
+          "column": 6
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-03-05T12:06:03.762Z",
-    "duration": 18951.277,
+    "startTime": "2024-08-08T16:47:11.523Z",
+    "duration": 23795.234999999986,
     "expected": 1,
     "skipped": 1,
     "unexpected": 0,
