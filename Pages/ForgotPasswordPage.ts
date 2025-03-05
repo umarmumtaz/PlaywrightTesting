@@ -16,7 +16,7 @@ class ForgotPasswordPage {
     async goToRecoverPasswordUrl() {
 
 
-        await this.page.goto('http://live.jobtrain.com:2022/LostUserAccount/RecoverUserNamePassword')
+        await this.page.goto('/LostUserAccount/RecoverUserNamePassword')
     }
 
 
@@ -33,7 +33,7 @@ async resetPasswordConfirmation(){
     await expect(this.page.getByTestId('h1-Confirmation Sent')).toContainText("Confirmation Sent");
     console.log(confirmationScreenHeading);
     await expect(this.page).toHaveURL(
-        "http://live.jobtrain.com:2022/LostUserAccount/ResetPasswordConfirmation");
+        "/LostUserAccount/ResetPasswordConfirmation");
 }
 async resetPasswordErrorMessage(){
 

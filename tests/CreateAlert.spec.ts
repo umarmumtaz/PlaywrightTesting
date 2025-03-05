@@ -7,7 +7,7 @@ import { readFromExcel } from "../utils/excelUtils";
 test.use({ storageState: 'state.json' });
 
 test.beforeEach(async ({ page }) => {
-    await page.goto('http://live.jobtrain.com:2022/') //,{ waitUntil: 'domcontentloaded', timeout: 650 });
+    await page.goto('') //,{ waitUntil: 'domcontentloaded', timeout: 650 });
 });
 
 test("Alert Create without login", async ({ page }) => {
@@ -29,7 +29,7 @@ await page.context().storageState({ path: 'state.json' });
 
 test("Create a new alert", async ({ page }) => {
     const createAlert = new CreateAlert(page);
-    await page.goto('http://live.jobtrain.com:2022/JobAlerts');
+    await page.goto('/JobAlerts');
     await createAlert.clickOnCreateBtn();
     await createAlert.toggleBtnHeading();
     await createAlert.verifyTheModalheading();
@@ -40,8 +40,8 @@ test("Create a new alert", async ({ page }) => {
 
  test("Update a created alert", async ({ page }) => {
     const createAlert = new CreateAlert(page);
-    await page.goto('http://live.jobtrain.com:2022/JobAlerts');
-    await page.getByLabel('edit your alert create test').first().click();
+    await page.goto('/JobAlerts');
+    await page.getByTestId('a-job-alert-title').first().click();
     await page.getByRole('link', { name: 'close' }).click();
  
  });
@@ -49,11 +49,10 @@ test("Create a new alert", async ({ page }) => {
 
  test("delete a created alert", async ({ page }) => {
     const createAlert = new CreateAlert(page);
-    await page.goto('http://live.jobtrain.com:2022/JobAlerts');
-    await page.getByLabel('delete your alert create test').first().click();
-    await page.getByRole('button', { name: 'Confirm' }).click();
-   const verifyTheAlertMessage = expect( await page.getByText('check_circle_outlineJob alert')).toBeVisible();
-console.log(verifyTheAlertMessage)
+    await page.goto('/JobAlerts');
+    await page.getByTestId('a-delete-alert-60251').click();
+     await page.getByTestId('btn-confirm-delete-alert').click();
+   await expect( await page.getByText('check_circle_outlineJob alert')).toBeVisible()
  
  });
 

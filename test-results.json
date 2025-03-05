@@ -57,14 +57,14 @@
   },
   "suites": [
     {
-      "title": "SavedJobs.spec.ts",
-      "file": "SavedJobs.spec.ts",
+      "title": "Register.spec.ts",
+      "file": "Register.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Veiw and remove the saved job",
-          "ok": false,
+          "title": "Register an Account Process final",
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -75,59 +75,81 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 49,
-                  "status": "failed",
-                  "duration": 16064,
-                  "error": {
-                    "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n  \u001b[2m- waiting for getByLabel('View').nth(1)\u001b[22m\n",
-                    "stack": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n  \u001b[2m- waiting for getByLabel('View').nth(1)\u001b[22m\n\n    at SavedJobs.clickOnViewSavedJob (D:\\PlaywrightAutomation\\JTAutomationLocalCS\\Pages\\SavedJobs.ts:20:43)\n    at D:\\PlaywrightAutomation\\JTAutomationLocalCS\\tests\\SavedJobs.spec.ts:48:25",
-                    "location": {
-                      "file": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\Pages\\SavedJobs.ts",
-                      "column": 43,
-                      "line": 20
-                    },
-                    "snippet": "\u001b[90m   at \u001b[39m..\\Pages\\SavedJobs.ts:20\n\n\u001b[0m \u001b[90m 18 |\u001b[39m\n \u001b[90m 19 |\u001b[39m \u001b[36masync\u001b[39m clickOnViewSavedJob(){\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'View'\u001b[39m)\u001b[33m.\u001b[39mnth(\u001b[35m1\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'a-back-to-link'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m\n \u001b[90m 23 |\u001b[39m }\u001b[0m"
-                  },
-                  "errors": [
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 13312,
+                  "errors": [],
+                  "stdout": [
                     {
-                      "location": {
-                        "file": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\Pages\\SavedJobs.ts",
-                        "column": 43,
-                        "line": 20
-                      },
-                      "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n  \u001b[2m- waiting for getByLabel('View').nth(1)\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\Pages\\SavedJobs.ts:20\n\n\u001b[0m \u001b[90m 18 |\u001b[39m\n \u001b[90m 19 |\u001b[39m \u001b[36masync\u001b[39m clickOnViewSavedJob(){\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'View'\u001b[39m)\u001b[33m.\u001b[39mnth(\u001b[35m1\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'a-back-to-link'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m\n \u001b[90m 23 |\u001b[39m }\u001b[0m\n\n\u001b[2m    at SavedJobs.clickOnViewSavedJob (D:\\PlaywrightAutomation\\JTAutomationLocalCS\\Pages\\SavedJobs.ts:20:43)\u001b[22m\n\u001b[2m    at D:\\PlaywrightAutomation\\JTAutomationLocalCS\\tests\\SavedJobs.spec.ts:48:25\u001b[22m"
+                      "text": "\n                             Now, let's  get started\n                        \n"
                     }
                   ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-03-05T12:06:07.961Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\test-results\\Register-Register-an-Account-Process-final-chromium\\test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cb5eb002671cd6c64a58-95b27ae6c5374ac9fa3b",
+          "file": "Register.spec.ts",
+          "line": 16,
+          "column": 5
+        },
+        {
+          "title": "logout test",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [
+                {
+                  "type": "skip"
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-12-24T10:32:14.560Z",
-                  "attachments": [],
-                  "errorLocation": {
-                    "file": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\Pages\\SavedJobs.ts",
-                    "column": 43,
-                    "line": 20
-                  }
+                  "startTime": "2025-03-05T12:06:22.532Z",
+                  "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "skipped"
             }
           ],
-          "id": "6eef304fc43add82469b-e6807cf1ab71a71d209d",
-          "file": "SavedJobs.spec.ts",
-          "line": 44,
-          "column": 9
+          "id": "cb5eb002671cd6c64a58-42283d03d7c9d89542c2",
+          "file": "Register.spec.ts",
+          "line": 59,
+          "column": 8
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-12-24T10:32:11.891Z",
-    "duration": 18850.81700000167,
-    "expected": 0,
-    "skipped": 0,
-    "unexpected": 1,
+    "startTime": "2025-03-05T12:06:03.762Z",
+    "duration": 18951.277,
+    "expected": 1,
+    "skipped": 1,
+    "unexpected": 0,
     "flaky": 0
   }
 }

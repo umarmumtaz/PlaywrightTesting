@@ -6,8 +6,7 @@ class MyJobs {
   }
 
   async myJobsSection(){
-    await this.page.goto('http://live.jobtrain.com:2022/Job/JobDetail?JobId=100541')
-    await this.page.getByRole('link', { name: 'Apply for job' }).first().click();
+    await this.page.goto('/Job/JobDetail?JobId=100541')
     
   }
 

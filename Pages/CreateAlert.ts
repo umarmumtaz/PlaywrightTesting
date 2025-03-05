@@ -44,15 +44,23 @@ expect(this.page.getByRole('heading', { name: 'Allow Job Alerts' })).toBeVisible
 }
 
 async filloutTheForm(){
-await this.page.getByPlaceholder('Name your alert').fill('create test alert');
-await this.page.getByRole('combobox').first().click();
 
-await this.page.getByRole('option', { name: 'Field Based' }).click();
-await this.page.waitForLoadState('networkidle');
-await this.page.getByRole('combobox').nth(1).click();
-await this.page.getByRole('option', { name: 'Ship - Accommodation' }).click();
-await this.page.getByRole('combobox').nth(2).click();
-await this.page.getByRole('option', { name: '- 30,000' }).click();
+  
+  await this.page.getByTestId('txt-alert-name').click();
+  await this.page.getByTestId('txt-alert-name').fill('test');
+  await this.page.getByRole('combobox').first().click();
+  await this.page.getByRole('option', { name: 'Wesley Street' }).click();
+  await this.page.getByRole('combobox').nth(1).click();
+  await this.page.getByRole('option', { name: 'Field Based' }).click();
+  await this.page.getByRole('combobox').nth(2).click();
+  await this.page.getByRole('option', { name: 'Ship - Accommodation' }).click();
+  await this.page.getByText('Salary x mid level 20,000 -').click();
+  await this.page.getByRole('option', { name: 'x' }).click();
+  await this.page.getByRole('combobox').nth(4).click();
+  await this.page.getByRole('option', { name: 'Accommodation' }).click();
+  await this.page.getByTestId('toggle-contract-0').getByText('Apprenticeship').click();
+
+
 
   
   }
