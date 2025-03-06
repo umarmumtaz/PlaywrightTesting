@@ -84,7 +84,7 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 14357,
+                      "duration": 11495,
                       "errors": [],
                       "stdout": [
                         {
@@ -93,7 +93,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-03-05T16:20:16.193Z",
+                      "startTime": "2025-03-06T10:57:30.897Z",
                       "attachments": [
                         {
                           "name": "screenshot",
@@ -126,7 +126,7 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 10829,
+                      "duration": 11079,
                       "errors": [],
                       "stdout": [
                         {
@@ -135,7 +135,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-03-05T16:20:30.750Z",
+                      "startTime": "2025-03-06T10:57:42.664Z",
                       "attachments": [
                         {
                           "name": "screenshot",
@@ -155,7 +155,7 @@
             },
             {
               "title": "login without email, and password",
-              "ok": false,
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -167,17 +167,9 @@
                   "results": [
                     {
                       "workerIndex": 0,
-                      "status": "failed",
-                      "duration": 10746,
-                      "error": {
-                        "message": "Error: \"context\" and \"page\" fixtures are not supported in \"afterAll\" since they are created on a per-test basis.\nIf you would like to reuse a single page between tests, create context manually with browser.newContext(). See https://aka.ms/playwright/reuse-page for details.\nIf you would like to configure your page before each test, do that in beforeEach hook instead.",
-                        "stack": "Error: \"context\" and \"page\" fixtures are not supported in \"afterAll\" since they are created on a per-test basis.\nIf you would like to reuse a single page between tests, create context manually with browser.newContext(). See https://aka.ms/playwright/reuse-page for details.\nIf you would like to configure your page before each test, do that in beforeEach hook instead."
-                      },
-                      "errors": [
-                        {
-                          "message": "Error: \"context\" and \"page\" fixtures are not supported in \"afterAll\" since they are created on a per-test basis.\nIf you would like to reuse a single page between tests, create context manually with browser.newContext(). See https://aka.ms/playwright/reuse-page for details.\nIf you would like to configure your page before each test, do that in beforeEach hook instead."
-                        }
-                      ],
+                      "status": "passed",
+                      "duration": 11068,
+                      "errors": [],
                       "stdout": [
                         {
                           "text": "infoInvalid UserName Or Password.\n"
@@ -185,7 +177,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-03-05T16:20:41.583Z",
+                      "startTime": "2025-03-06T10:57:53.752Z",
                       "attachments": [
                         {
                           "name": "screenshot",
@@ -195,7 +187,7 @@
                       ]
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
               "id": "42af536f2c838a173cb6-25c2e086d259d0c4af9e",
@@ -210,11 +202,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-03-05T16:20:15.090Z",
-    "duration": 37309.805,
-    "expected": 2,
+    "startTime": "2025-03-06T10:57:29.126Z",
+    "duration": 35802.297,
+    "expected": 3,
     "skipped": 0,
-    "unexpected": 1,
+    "unexpected": 0,
     "flaky": 0
   }
 }

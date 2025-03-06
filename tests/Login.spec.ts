@@ -39,10 +39,10 @@ test("login without email, and password", async ({ page }) => {
   await loginPage.verifyInvalidLoginAssertions();
 });
 //post conditions of the TCs
-test.afterAll(async ({ page }) => {
-  await page.context().clearCookies();
-  console.log('All login test cases have been executed successfully!')
-});
+// test.afterAll(async ({ page }) => {
+//   await page.context().clearCookies();
+//   console.log('All login test cases have been executed successfully!')
+// });
 
 });
 
