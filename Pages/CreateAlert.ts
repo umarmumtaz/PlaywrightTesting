@@ -11,7 +11,7 @@ class CreateAlert {
 
   async clickOnlistVacanciesBtn(){
 
-    await this.page.getByRole('link',{name:"List Vacancies"}).click()
+    await this.page.locator("a-home-link").click()
 
 }
 
@@ -48,17 +48,19 @@ async filloutTheForm(){
   
   await this.page.getByTestId('txt-alert-name').click();
   await this.page.getByTestId('txt-alert-name').fill('test');
+
   await this.page.getByRole('combobox').first().click();
-  await this.page.getByRole('option', { name: 'Wesley Street' }).click();
+  await this.page.getByRole('option', { name: 'East Anglia' }).click();
   await this.page.getByRole('combobox').nth(1).click();
-  await this.page.getByRole('option', { name: 'Field Based' }).click();
-  await this.page.getByRole('combobox').nth(2).click();
-  await this.page.getByRole('option', { name: 'Ship - Accommodation' }).click();
-  await this.page.getByText('Salary x mid level 20,000 -').click();
-  await this.page.getByRole('option', { name: 'x' }).click();
-  await this.page.getByRole('combobox').nth(4).click();
-  await this.page.getByRole('option', { name: 'Accommodation' }).click();
-  await this.page.getByTestId('toggle-contract-0').getByText('Apprenticeship').click();
+  await this.page.getByRole('option', { name: 'Administration' }).click();
+  //below locators are for local live
+  // await this.page.getByRole('combobox').nth(2).click();
+  // await this.page.getByRole('option', { name: 'Ship - Accommodation' }).click();
+  // await this.page.getByText('Salary x mid level 20,000 -').click();
+  // await this.page.getByRole('option', { name: 'x' }).click();
+  // await this.page.getByRole('combobox').nth(4).click();
+  // await this.page.getByRole('option', { name: 'Accommodation' }).click();
+  // await this.page.getByTestId('toggle-contract-0').getByText('Apprenticeship').click();
 
 
 

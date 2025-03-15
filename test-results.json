@@ -57,154 +57,57 @@
   },
   "suites": [
     {
-      "title": "Login.spec.ts",
-      "file": "Login.spec.ts",
+      "title": "CreateAlert.spec.ts",
+      "file": "CreateAlert.spec.ts",
       "column": 0,
       "line": 0,
-      "specs": [],
-      "suites": [
+      "specs": [
         {
-          "title": "Run All Login Test Cases",
-          "file": "Login.spec.ts",
-          "line": 8,
-          "column": 6,
-          "specs": [
+          "title": "delete a created alert",
+          "ok": true,
+          "tags": [],
+          "tests": [
             {
-              "title": "login with valid email, and password",
-              "ok": true,
-              "tags": [],
-              "tests": [
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
                 {
-                  "timeout": 90000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
+                  "workerIndex": 49,
+                  "status": "passed",
+                  "duration": 15202,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-03-15T22:29:42.287Z",
+                  "attachments": [
                     {
-                      "workerIndex": 5,
-                      "status": "passed",
-                      "duration": 16866,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Email goes here\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-03-15T21:10:51.787Z",
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\test-results\\Login-Run-All-Login-Test-C-0d064-th-valid-email-and-password-chromium\\test-finished-1.png"
-                        }
-                      ]
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\test-results\\CreateAlert-delete-a-created-alert-chromium\\test-finished-1.png"
                     }
-                  ],
-                  "status": "expected"
+                  ]
                 }
               ],
-              "id": "42af536f2c838a173cb6-7f5b66ead4d73ba40718",
-              "file": "Login.spec.ts",
-              "line": 10,
-              "column": 5
-            },
-            {
-              "title": "login with invalid email, and password",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 5,
-                      "status": "passed",
-                      "duration": 16344,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "infoInvalid UserName Or Password.\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-03-15T21:11:08.736Z",
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\test-results\\Login-Run-All-Login-Test-C-e66ee--invalid-email-and-password-chromium\\test-finished-1.png"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "42af536f2c838a173cb6-ee08105e76c30ea26c94",
-              "file": "Login.spec.ts",
-              "line": 23,
-              "column": 5
-            },
-            {
-              "title": "login without email, and password",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 5,
-                      "status": "passed",
-                      "duration": 15812,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "infoInvalid UserName Or Password.\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-03-15T21:11:25.095Z",
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\test-results\\Login-Run-All-Login-Test-C-21c52--without-email-and-password-chromium\\test-finished-1.png"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "42af536f2c838a173cb6-25c2e086d259d0c4af9e",
-              "file": "Login.spec.ts",
-              "line": 32,
-              "column": 5
+              "status": "expected"
             }
-          ]
+          ],
+          "id": "a74033e959301895029d-0ddc4fca8d0422dc0ffa",
+          "file": "CreateAlert.spec.ts",
+          "line": 48,
+          "column": 6
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-03-15T21:10:48.479Z",
-    "duration": 52485.216999999946,
-    "expected": 3,
+    "startTime": "2025-03-15T22:29:39.997Z",
+    "duration": 17820.862000000663,
+    "expected": 1,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
