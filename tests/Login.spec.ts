@@ -13,7 +13,7 @@ test("login with valid email, and password", async ({ page }) => {
   await loginPage.clickOnSignInButton();
    //await loginPage.closeCookies();
   await loginPage.verifyThePlaceHolderTexts()
-  await loginPage.enterValidEmail("nanncykevin+1120@gmail.com");
+  await loginPage.enterValidEmail("nanncykevin+316@gmail.com");
   await loginPage.enterValidPassword("Testing@123");
   await loginPage.clickOnLoginButton();
   await loginPage.verifyTheJoblistingTitle();

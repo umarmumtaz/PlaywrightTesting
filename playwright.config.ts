@@ -35,7 +35,7 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
-    baseURL: 'http://live.jobtrain.com:2022/',// we can add the base url, and just add the path in the code
+    baseURL: 'https://test.jobtrain.co.uk/ybscareers/',// we can add the base url, and just add the path in the code
     
    // testIdAttribute: 'id',
     headless: true, //its used to work as an headless

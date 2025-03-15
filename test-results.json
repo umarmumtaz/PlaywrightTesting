@@ -82,9 +82,9 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
+                      "workerIndex": 5,
                       "status": "passed",
-                      "duration": 11495,
+                      "duration": 16866,
                       "errors": [],
                       "stdout": [
                         {
@@ -93,7 +93,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-03-06T10:57:30.897Z",
+                      "startTime": "2025-03-15T21:10:51.787Z",
                       "attachments": [
                         {
                           "name": "screenshot",
@@ -124,9 +124,9 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
+                      "workerIndex": 5,
                       "status": "passed",
-                      "duration": 11079,
+                      "duration": 16344,
                       "errors": [],
                       "stdout": [
                         {
@@ -135,7 +135,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-03-06T10:57:42.664Z",
+                      "startTime": "2025-03-15T21:11:08.736Z",
                       "attachments": [
                         {
                           "name": "screenshot",
@@ -166,9 +166,9 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
+                      "workerIndex": 5,
                       "status": "passed",
-                      "duration": 11068,
+                      "duration": 15812,
                       "errors": [],
                       "stdout": [
                         {
@@ -177,7 +177,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-03-06T10:57:53.752Z",
+                      "startTime": "2025-03-15T21:11:25.095Z",
                       "attachments": [
                         {
                           "name": "screenshot",
@@ -202,8 +202,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-03-06T10:57:29.126Z",
-    "duration": 35802.297,
+    "startTime": "2025-03-15T21:10:48.479Z",
+    "duration": 52485.216999999946,
     "expected": 3,
     "skipped": 0,
     "unexpected": 0,

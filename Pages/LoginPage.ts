@@ -20,12 +20,12 @@ class LoginPage {
     await this.page.getByTestId("txt-password").fill(password);
   }
   async clickOnLoginButton() {
-    await this.page.getByTestId("btn-").click();
+    await this.page.locator("#signIn").click();
   }
 
   async verifyTheJoblistingTitle() {
     const pageHeading = await this.page.locator(".jt-page-title");
-    await expect(pageHeading).toContainText("My Jobs");
+    await expect(pageHeading).toContainText("My Applications");
     await expect(pageHeading).toBeTruthy();
   }
   async verifyInvalidLoginAssertions() {

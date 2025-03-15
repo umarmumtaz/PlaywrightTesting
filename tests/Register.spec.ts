@@ -11,7 +11,7 @@ let registerFromLoginPage: LoginPage; // Declare outside the test case to access
 
 
 test.beforeEach(async ({ page }) => {
-    await page.goto('http://live.jobtrain.com:2022/', { waitUntil: 'domcontentloaded', timeout: 65000 });
+    await page.goto('https://test.jobtrain.co.uk/ybscareers/', { waitUntil: 'domcontentloaded', timeout: 65000 });
 });
 test("Register an Account Process final", async ({ page }) => {
   const registerFromLoginPage = new LoginPage(page); 
