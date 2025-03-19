@@ -57,13 +57,13 @@
   },
   "suites": [
     {
-      "title": "CreateAlert.spec.ts",
-      "file": "CreateAlert.spec.ts",
+      "title": "SavedJobs.spec.ts",
+      "file": "SavedJobs.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "delete a created alert",
+          "title": "job save without login",
           "ok": true,
           "tags": [],
           "tests": [
@@ -75,19 +75,26 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 49,
+                  "workerIndex": 0,
                   "status": "passed",
-                  "duration": 15202,
+                  "duration": 25200,
                   "errors": [],
-                  "stdout": [],
+                  "stdout": [
+                    {
+                      "text": "ypvyak88yy@gmail.com\n"
+                    },
+                    {
+                      "text": "Testing@123 \n"
+                    }
+                  ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-03-15T22:29:42.287Z",
+                  "startTime": "2025-03-19T15:57:01.893Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\test-results\\CreateAlert-delete-a-created-alert-chromium\\test-finished-1.png"
+                      "path": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\test-results\\SavedJobs-job-save-without-login-chromium\\test-finished-1.png"
                     }
                   ]
                 }
@@ -95,19 +102,95 @@
               "status": "expected"
             }
           ],
-          "id": "a74033e959301895029d-0ddc4fca8d0422dc0ffa",
-          "file": "CreateAlert.spec.ts",
-          "line": 48,
-          "column": 6
+          "id": "6eef304fc43add82469b-bf8e08cb937aa4e8c026",
+          "file": "SavedJobs.spec.ts",
+          "line": 15,
+          "column": 5
+        },
+        {
+          "title": "Save job after login",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 13436,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-03-19T15:57:27.224Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\test-results\\SavedJobs-Save-job-after-login-chromium\\test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6eef304fc43add82469b-760b387e7c494b1e902a",
+          "file": "SavedJobs.spec.ts",
+          "line": 33,
+          "column": 5
+        },
+        {
+          "title": "Veiw and remove the saved job",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 20604,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-03-19T15:57:40.668Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\test-results\\SavedJobs-Veiw-and-remove-the-saved-job-chromium\\test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6eef304fc43add82469b-e6807cf1ab71a71d209d",
+          "file": "SavedJobs.spec.ts",
+          "line": 42,
+          "column": 9
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-03-15T22:29:39.997Z",
-    "duration": 17820.862000000663,
-    "expected": 1,
+    "startTime": "2025-03-19T15:57:00.341Z",
+    "duration": 61054.64599999999,
+    "expected": 3,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

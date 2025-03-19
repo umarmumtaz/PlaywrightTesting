@@ -21,7 +21,7 @@ await page.getByTestId('txt-email').fill(emailPassword[0].email);
 await page.getByTestId('txt-password').fill(emailPassword[0].password);
 await page.keyboard.press('Space');
 await page.locator('#signIn').click();
-//await page.context().storageState({ path: 'state.json' });
+await page.context().storageState({ path: 'state.json' });
 });
 
 

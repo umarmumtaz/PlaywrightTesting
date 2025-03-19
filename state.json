@@ -12,7 +12,7 @@
     },
     {
       "name": ".AspNetCore.Mvc.CookieTempDataProvider",
-      "value": "CfDJ8GSkg20IFe1KhgBkaPOKP2vwID_XYMQUH5nZh47eDDA465Otf_1vyv3JopjQGG-gAX7mcm_3sFV2EJvSdqXcyopyRQFPKTYOZ2tqnBZXHpl3FjLMj9_hMpDCDONNm_QdEcNWjimg-ZbxSu_IeBD5_xhlx86mcEWWq3AuA1X8DDv38EDq4RjjK6xzU_JFDGGY-A",
+      "value": "CfDJ8GSkg20IFe1KhgBkaPOKP2tq-FxErDH194Pvo2ytRNGf8WKAbFhYF4Sg3gWX5bXUcr5i3-rxMn9mzdyYQZCQoHwac81Kk3Eps-c8C2w9XO4Y5zMbgsgPMgSOUKJohZ2UwykkNuUVUnkmOO4ahivZYzc",
       "domain": "test.jobtrain.co.uk",
       "path": "/ybscareers",
       "expires": -1,
@@ -51,11 +51,41 @@
       "sameSite": "None"
     },
     {
-      "name": "ai_session",
-      "value": "7kbQY1s8r0waYZCYQffrnE|1742071694277|1742071711531",
+      "name": "jt.candidate.Session_4",
+      "value": "CfDJ8GSkg20IFe1KhgBkaPOKP2sY8s4fzfENUX8GYtgPTgrQjZEtg73P5DJcWymhjmnunK5uZOY6TMLKP4cv0tyUb2dVjANGAGyU1Jktqu9C%2BHbwWCcWVz2ScfJuNyeZcFyexA%2Bo2IpqTldp8blJxigO5SW%2FLMAeyDtvJkNlbd9SCRKC",
       "domain": "test.jobtrain.co.uk",
       "path": "/",
-      "expires": 1742073511.532226,
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "jt.candidate.Session_1",
+      "value": "CfDJ8GSkg20IFe1KhgBkaPOKP2tW4tydyEv2SutTPp8KATxplSvuGXGGRorNDzhSLvkoB4Rl79N%2BvIdKjxw4RhHkmw4lH8CCmrspIhjqV5ze0tpFI9vJALoos%2BclIx9Sj9Fz6t%2BmQyqt3sjuI2ldZhnloGvrab7vvwlERTsvGBAdaCa8",
+      "domain": "test.jobtrain.co.uk",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "UniqueUserKey",
+      "value": "8a965cf2-9703-43ab-881d-a518767fc763",
+      "domain": "test.jobtrain.co.uk",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "ai_session",
+      "value": "i/FNjcSry/IutTPLhIz/4h|1742399109507|1742399845577",
+      "domain": "test.jobtrain.co.uk",
+      "path": "/",
+      "expires": 1742401645.576466,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
@@ -65,6 +95,10 @@
     {
       "origin": "https://test.jobtrain.co.uk",
       "localStorage": [
+        {
+          "name": "ybscareersjobAlertParams",
+          "value": "\"{\\\"what\\\":\\\"\\\",\\\"where\\\":\\\"\\\",\\\"distance\\\":null,\\\"locationId\\\":[],\\\"department\\\":[],\\\"category\\\":[]}\""
+        },
         {
           "name": "_grecaptcha",
           "value": "09AP_l5mNPWxuMq_p8WWcYVO8Mls59ijUUtDPJgCT-TdymnAVTp2y85S_P_RCIsYujwNLOIN0ewGHJRmVtqnae0YCV2IHLGg9tMu4uWxKfnU_E-8cA-zLYH9Ci70oYjjT4"
