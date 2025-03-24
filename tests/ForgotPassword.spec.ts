@@ -1,7 +1,10 @@
 // //this script imports the necessory modules
-import { test, expect, BrowserContext } from "@playwright/test";
+import { test, expect, Page, BrowserContext,} from "@playwright/test";
 //import the login page class defined in the login page
 import { ForgotPasswordPage } from "../Pages/ForgotPasswordPage.ts";
+
+
+test.describe("Run All Forgot Test Cases", () => {
 
 test("Verify Forgot Password with valid email", async ({ browser }) => {
   const context = await browser.newContext();
@@ -72,10 +75,10 @@ test("Verify the recover username without an mobile number from reset password p
   await forgotPassword.verifyTheResetPasswordPageContent();
   await page.getByRole('link', { name: 'No longer have access to your' }).click();
   await expect (page.locator('.text-primary.px-5.h4')).toHaveText('Enter Mobile Number');
-  await page.getByTestId('txtPhoneNumber').fill('47463611111');
-  await page.getByTestId('btnSubmit').click();
+  await page.locator('#txtPhoneNumber').fill('463634040');
+  await page.locator('#btnSubmit').click();
   await expect(page.getByText('Please check your phone')).toHaveText('Please check your phone number is entered correctly');
   
 });
-
+});
 //Recovery with this mobile number has been attempted recently, please try again later.

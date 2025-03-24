@@ -16,7 +16,7 @@ class ForgotPasswordPage {
     async goToRecoverPasswordUrl() {
 
 
-        await this.page.goto('/LostUserAccount/RecoverUserNamePassword')
+        await this.page.goto('LostUserAccount/RecoverUserNamePassword')
     }
 
 
@@ -33,10 +33,10 @@ async resetPasswordConfirmation(){
     await expect(this.page.getByTestId('h1-Confirmation Sent')).toContainText("Confirmation Sent");
     console.log(confirmationScreenHeading);
     await expect(this.page).toHaveURL(
-        "/LostUserAccount/ResetPasswordConfirmation");
+        "LostUserAccount/ResetPasswordConfirmation");
 }
 async resetPasswordErrorMessage(){
-
+await this.page.getByTestId('btn-request-password').click();
     const warningMesageRP = await this.page.locator(".invalid-feedback").textContent();
     await expect(this.page.locator(".invalid-feedback")).toContainText(
       "This field needs to be a valid email");

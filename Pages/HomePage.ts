@@ -81,6 +81,8 @@ await expect(searchByistance).toHaveText('Distance')
 const searchByistanceText = await searchByistance.textContent();
 console.log("Heading text:", searchByistanceText);
 
+/*
+these for other servers
 const searchBySalary = this.page.getByText('Salary');
 await expect(searchBySalary).toHaveText('Salary')
 const searchBySalaryText = await searchBySalary.textContent();
@@ -91,15 +93,18 @@ await expect(searchByRegions).toHaveText('Regions')
 const searchByRegionsText = await searchByRegions.textContent();
 console.log("Heading text:", searchByRegionsText);
 
+const searchByDataPosted = this.page.getByText('Date Posted');
+await expect(searchByDataPosted).toHaveText('Date Posted')
+const searchByDatePostedText = await searchByDataPosted.textContent();
+console.log("Heading text:", searchByDatePostedText);
+*/
+
 const searchByCategories = this.page.getByText('Job Categories')
 await expect(searchByCategories).toHaveText('Job Categories')
 const searchByCategoriesText = await searchByCategories.textContent();
 console.log("Heading text:", searchByCategoriesText);
 
-const searchByDataPosted = this.page.getByText('Date Posted');
-await expect(searchByDataPosted).toHaveText('Date Posted')
-const searchByDatePostedText = await searchByDataPosted.textContent();
-console.log("Heading text:", searchByDatePostedText);
+
 
 
 
@@ -112,7 +117,7 @@ async getJobAlertsFooter(){
   const getJobAlertsTextHeading = this.page.locator('.call-to-action__title');
   await expect(getJobAlertsTextHeading).toHaveText('Join our Talent Network!')
   const getJobAlertsTextSubHeading = this.page.locator('.intro.call-to-action__sub-title')
-  await expect(getJobAlertsTextSubHeading).toHaveText('Submit you contact details and CV to be consodered for relevant future oppoertunities within our nwtwork.')
+  await expect(getJobAlertsTextSubHeading).toHaveText('Submit your contact details and CV to be considered for relevant future opportunities.')
 }
 
 async verifyContentIfNoJobsFound(entervalue: string){
@@ -175,29 +180,26 @@ async verifyTheJobsTitles(){
 }
 
 async verifyTheFilterWithRandomValues(){
-    await this.page.getByRole('searchbox', { name: 'Filter the list of jobs by salary band' }).click();
 
-    // Locate the first option in the dropdown
-    const salaryFirstOption = await this.page.locator('#select2-searchFilterSalary-results li').first();
-    await salaryFirstOption.click();
-    // Verify the selection (optional)
-    const selectedValue = await this.page.getByRole('searchbox', { name: 'Filter the list of jobs by salary band' }).textContent();
-    console.log(`Selected value: ${selectedValue}`);
-
+//distance
     await this.page.getByLabel('Please Select').click();
     const distanceFirstOption =  await this.page.locator('#select2-searchFilterDistance-results li').first();
     await distanceFirstOption.click();
+//locations
 
-    await this.page.getByRole('searchbox', { name: 'Please Select' }).click();
-    const regionsFirstOption =  await this.page.locator('#select2-searchFilterRegions-results li').first();
-    await regionsFirstOption.click();
+    await this.page.getByRole('searchbox', { name: 'Filter the list of jobs by location' }).click();
+    const locationsFirstOption =  await this.page.locator('#select2-searchFilterLocations-results li').first();
+    await locationsFirstOption.click();
+    /*
+//Job categories
+await this.page.getByRole('searchbox', { name: 'Filter the list of jobs by job category' }).click();
+await this.page.locator('#select2-searchFilterJobcategories-result-rkm6-36').click();
 
-    await this.page.getByPlaceholder('Please Select').click();
-    const jobcategoriesFirstOption =  await this.page.locator('#select2-searchFilterJobcategories-results li').first();
-    await jobcategoriesFirstOption.click();
-  
-    await this.page.getByRole('textbox', { name: 'Anytime' }).click();
+//departments
 
+await this.page.getByRole('searchbox', { name: 'Filter the list of jobs by department' }).click();
+await this.page.locator('#select2-searchFilterDepartment-result-5pg1-437').click();
+*/
     await this.page.getByTestId('btn-apply-filters').click();
   
 }

@@ -53,6 +53,5 @@ test("Home Page Verification", async ({ page }) => {
     await homePage2.clickOnListOfVacanicies();
     await homePage2.verifyTheFilterWithRandomValues();
 
-
   });
 

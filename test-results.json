@@ -30,7 +30,7 @@
     ],
     "reportSlowTests": {
       "max": 5,
-      "threshold": 15000
+      "threshold": 300000
     },
     "quiet": false,
     "projects": [
@@ -38,7 +38,9 @@
         "outputDir": "D:/PlaywrightAutomation/JTAutomationLocalCS/test-results",
         "repeatEach": 1,
         "retries": 0,
-        "metadata": {},
+        "metadata": {
+          "actualWorkers": 1
+        },
         "id": "chromium",
         "name": "chromium",
         "testDir": "D:/PlaywrightAutomation/JTAutomationLocalCS/tests",
@@ -51,146 +53,235 @@
     ],
     "shard": null,
     "updateSnapshots": "missing",
-    "version": "1.44.1",
+    "updateSourceMethod": "3way",
+    "version": "1.51.1",
     "workers": 1,
     "webServer": null
   },
   "suites": [
     {
-      "title": "SavedJobs.spec.ts",
-      "file": "SavedJobs.spec.ts",
+      "title": "ForgotPassword.spec.ts",
+      "file": "ForgotPassword.spec.ts",
       "column": 0,
       "line": 0,
-      "specs": [
+      "specs": [],
+      "suites": [
         {
-          "title": "job save without login",
-          "ok": true,
-          "tags": [],
-          "tests": [
+          "title": "Run All Forgot Test Cases",
+          "file": "ForgotPassword.spec.ts",
+          "line": 7,
+          "column": 6,
+          "specs": [
             {
-              "timeout": 90000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
+              "title": "Verify Forgot Password with valid email",
+              "ok": true,
+              "tags": [],
+              "tests": [
                 {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 25200,
-                  "errors": [],
-                  "stdout": [
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
                     {
-                      "text": "ypvyak88yy@gmail.com\n"
-                    },
-                    {
-                      "text": "Testing@123 \n"
+                      "workerIndex": 18,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 16857,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Enter your username or email address and a link will be sent for you to reset your password\n"
+                        },
+                        {
+                          "text": "Confirmation Sent\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-03-24T15:42:48.821Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\test-results\\ForgotPassword-Run-All-For-75044-t-Password-with-valid-email-chromium\\test-finished-1.png"
+                        }
+                      ]
                     }
                   ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-03-19T15:57:01.893Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\test-results\\SavedJobs-job-save-without-login-chromium\\test-finished-1.png"
-                    }
-                  ]
+                  "status": "expected"
                 }
               ],
-              "status": "expected"
-            }
-          ],
-          "id": "6eef304fc43add82469b-bf8e08cb937aa4e8c026",
-          "file": "SavedJobs.spec.ts",
-          "line": 15,
-          "column": 5
-        },
-        {
-          "title": "Save job after login",
-          "ok": true,
-          "tags": [],
-          "tests": [
+              "id": "0b16885acaa845d75ee4-72acaa1077c7dabd1f46",
+              "file": "ForgotPassword.spec.ts",
+              "line": 9,
+              "column": 5
+            },
             {
-              "timeout": 90000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
+              "title": "Verify the forgot Password without email",
+              "ok": true,
+              "tags": [],
+              "tests": [
                 {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 13436,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-03-19T15:57:27.224Z",
-                  "attachments": [
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
                     {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\test-results\\SavedJobs-Save-job-after-login-chromium\\test-finished-1.png"
+                      "workerIndex": 18,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 11511,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Enter your username or email address and a link will be sent for you to reset your password\n"
+                        },
+                        {
+                          "text": "\n                                This field needs to be a valid email\n                            \n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-03-24T15:43:07.213Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\test-results\\ForgotPassword-Run-All-For-add6c-rgot-Password-without-email-chromium\\test-finished-1.png"
+                        },
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\test-results\\ForgotPassword-Run-All-For-add6c-rgot-Password-without-email-chromium\\test-finished-2.png"
+                        }
+                      ]
                     }
-                  ]
+                  ],
+                  "status": "expected"
                 }
               ],
-              "status": "expected"
-            }
-          ],
-          "id": "6eef304fc43add82469b-760b387e7c494b1e902a",
-          "file": "SavedJobs.spec.ts",
-          "line": 33,
-          "column": 5
-        },
-        {
-          "title": "Veiw and remove the saved job",
-          "ok": true,
-          "tags": [],
-          "tests": [
+              "id": "0b16885acaa845d75ee4-0f5df6a7985a33dade08",
+              "file": "ForgotPassword.spec.ts",
+              "line": 25,
+              "column": 5
+            },
             {
-              "timeout": 90000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
+              "title": "Verify the recover username with valid mobile number from reset password page",
+              "ok": true,
+              "tags": [],
+              "tests": [
                 {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 20604,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-03-19T15:57:40.668Z",
-                  "attachments": [
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
                     {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\test-results\\SavedJobs-Veiw-and-remove-the-saved-job-chromium\\test-finished-1.png"
+                      "workerIndex": 18,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 16006,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-03-24T15:43:18.737Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\test-results\\ForgotPassword-Run-All-For-205a6-er-from-reset-password-page-chromium\\test-finished-1.png"
+                        },
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\test-results\\ForgotPassword-Run-All-For-205a6-er-from-reset-password-page-chromium\\test-finished-2.png"
+                        },
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\test-results\\ForgotPassword-Run-All-For-205a6-er-from-reset-password-page-chromium\\test-finished-3.png"
+                        }
+                      ]
                     }
-                  ]
+                  ],
+                  "status": "expected"
                 }
               ],
-              "status": "expected"
+              "id": "0b16885acaa845d75ee4-64ff71bd997fe41a3d55",
+              "file": "ForgotPassword.spec.ts",
+              "line": 43,
+              "column": 5
+            },
+            {
+              "title": "Verify the recover username without an mobile number from reset password page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 18,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 15516,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-03-24T15:43:34.753Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\test-results\\ForgotPassword-Run-All-For-92e6f-er-from-reset-password-page-chromium\\test-finished-1.png"
+                        },
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\test-results\\ForgotPassword-Run-All-For-92e6f-er-from-reset-password-page-chromium\\test-finished-2.png"
+                        },
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\test-results\\ForgotPassword-Run-All-For-92e6f-er-from-reset-password-page-chromium\\test-finished-3.png"
+                        },
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\test-results\\ForgotPassword-Run-All-For-92e6f-er-from-reset-password-page-chromium\\test-finished-4.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0b16885acaa845d75ee4-76c022e90adf2749a4af",
+              "file": "ForgotPassword.spec.ts",
+              "line": 63,
+              "column": 5
             }
-          ],
-          "id": "6eef304fc43add82469b-e6807cf1ab71a71d209d",
-          "file": "SavedJobs.spec.ts",
-          "line": 42,
-          "column": 9
+          ]
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-03-19T15:57:00.341Z",
-    "duration": 61054.64599999999,
-    "expected": 3,
+    "startTime": "2025-03-24T15:42:44.187Z",
+    "duration": 66139.01600000262,
+    "expected": 4,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
