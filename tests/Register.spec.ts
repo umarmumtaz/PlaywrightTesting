@@ -23,23 +23,27 @@ test("Register an Account Process final", async ({ page }) => {
   await registerPage.verifyTheRegister1PageTitle();
   // Generate random email and register the account
   const emailForRegistration = registerPage.randomEmail;
-  const passwordForRegistration = "Testing@123 ";
+  const passwordForRegistration = "Testing@123";
   await registerPage.validRegisterCredentials();
   await page.getByTestId("txt-create-a-password").fill(passwordForRegistration);
    //space for enabling the button
   await page.keyboard.press('Space'); 
+  await page.getByTestId("txt-create-a-password").press('Backspace');
+ 
   await page.waitForLoadState('networkidle'); //it alos added in the email need to fix
   await page.locator('#register').click();
   const secodPageHeading = await page.locator('.register__title.text-primary.h3');
   await expect(secodPageHeading).toHaveText('A couple more things');
   await page.getByPlaceholder('First name').fill('paul');
   await page.getByPlaceholder('Last name').fill('walker');
+  await page.keyboard.press('Space'); 
+  await page.getByPlaceholder('Last name').press('Backspace');
   await page.getByPlaceholder('Mobile number').fill('00441172345678');
   // Check if the checkbox is visible
   await expect(page.getByText('I agree to the terms and')).toBeVisible();
   // Check if the checkbox is enabled
   await page.getByText('I agree to the').click();
-  await page.getByPlaceholder('Last name').press('Enter');
+  await page.waitForLoadState('networkidle');
   await page.locator('#continue').click();
   
   //more to my account page

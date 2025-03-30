@@ -1,5 +1,6 @@
 import { expect } from "@playwright/test";
 import { Page, BrowserContext } from "playwright";
+import { readFromExcel } from "../utils/excelUtils";
 
 class ApplyForJob {
   constructor(public page: Page) {
@@ -16,11 +17,25 @@ class ApplyForJob {
 
 // };
 
+// async loginForJobApply() {
+//   // Read credentials from Excel then login and appply for a job
+//   await this.page.goto("");
+//   await this.page.locator(".sign_in_detail").click();
   
+//   const emailPassword: any = await readFromExcel("./accountData.xlsx","Sheet1");
+//   console.log(emailPassword[0].email);
+//   //  console.log(emailPassword[0].password)
+//   await this.page.getByTestId("txt-email").fill(emailPassword[0].email);
+//   await this.page.getByTestId("txt-password").fill(emailPassword[0].password);
+//   await this.page.keyboard.press("Space");
+//   await this.page.waitForLoadState('networkidle');
+//   await this.page.locator("#signIn").click();
+// }
 
   
   async clickOnApplyforJobBtn(){
-    await this.page.goto('http://live.jobtrain.com:2022/Job/JobDetail?JobId=100541')
+
+    await this.page.goto('Job/JobDetail?JobId=20311')
     await this.page.getByRole('link', { name: 'Apply for job' }).first().click();
     
     }
@@ -36,7 +51,8 @@ await this.page.locator('#continueBtn').click()
 }
 
 async clickOnTheContinueBtn(){
-    //verify content     getByText('Great - you\'re applying for')
+    //there is an issue with this test cases
+    expect(await this.page.getByText('Great - you\'re applying for')).toContainText("Bulk Recruitment Test Job");
     await this.page.locator('#showQuestions').click()
 }
 

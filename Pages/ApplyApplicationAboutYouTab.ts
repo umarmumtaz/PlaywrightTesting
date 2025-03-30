@@ -7,7 +7,7 @@ class ApplyApplicationAboutYouTab{
 
 async clickOnEditJobBtn(){
     //assertions
-await this.page.getByLabel('Click Here to Edit Your').first().click();
+await this.page.getByTestId('div-my-applications').locator('div').filter({ hasText: 'Edit' }).nth(2).click();
 }
 async clickOnFinishApplication(){
     //assertions
@@ -27,17 +27,20 @@ for (const heading of headings) {
 }
 
 async verifyTheJobTitle(){
+   await this.page.goto("MyJobs")
    expect(await this.page.getByText('**Bulk Recruitment Test Job')).toBeVisible();
 }
-async verifyTheFormHeading(){
-    expect(await this.page.getByRole('heading', { name: 'A little bit about you' })).toBeVisible();
- }
+
+
 
  async verifyTheParaghraphAboutYoutTab(){
-    const content = this.page.getByText('Please complete this');
-    await expect(content).toBeVisible();
-    await expect(content).toContainText('0044 (0)1565 818 234');
-    await expect(content).toContainText('Recruitment Team on recruitment@ybs.co.uk.');
+    const contentAboutYou = this.page.getByText('Please complete this');
+    await expect(contentAboutYou).toBeVisible();
+    await expect(contentAboutYou).toContainText('+44 (0)1565 818 234');
+    await expect(contentAboutYou).toContainText('Recruitment Team on recruitment@ybs.co.uk.');
+    const contentText = await contentAboutYou.textContent();
+    console.log(contentText);
+  
  }
 
 
@@ -51,18 +54,19 @@ async verifyTheFormHeading(){
     for (const aboutYouTab of headingsAboutYou) {
        await expect(this.page.getByText(aboutYouTab)).toBeVisible();
     }
-
+console.log(headingsAboutYou)
 }
+
 async goToAboutYou(){
    await this.page.goto("https://test.jobtrain.co.uk/ybscareers/Application/AboutYou?Jobid=20311&section=1&Stage=0&edit=1")
 }
 
 async verifyThePrePopulatedFiledData (){
 
-   await expect(this.page.getByPlaceholder('Surname')).toHaveValue('walker', { timeout: 10000 }); 
-   await expect(this.page.getByPlaceholder('First Name/s')).toHaveValue('paul', { timeout: 10000 });
-   await expect(this.page.getByPlaceholder('Mobile Telephone')).toHaveValue('441172345678', { timeout: 10000 });
-   await expect(this.page.getByPlaceholder('Email Address')).toHaveValue('yzvshsjczu@jt.com', { timeout: 10000 });
+   await expect(this.page.getByTestId('txt-txtLASTNAME')).toHaveValue('walker', { timeout: 10000 }); 
+   await expect(this.page.getByTestId('txt-txtFIRSTNAME')).toHaveValue('paul', { timeout: 10000 });
+   await expect(this.page.getByTestId('txt-txtMOBILE')).toHaveValue('00441172345678', { timeout: 10000 });
+   await expect(this.page.getByTestId('email-txtEMAILADDRESS')).toHaveValue('270h9bgprv@gmail.com', { timeout: 10000 });
 }
 async addValuesInTheFields (){
    

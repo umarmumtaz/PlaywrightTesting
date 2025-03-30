@@ -60,20 +60,20 @@
   },
   "suites": [
     {
-      "title": "ForgotPassword.spec.ts",
-      "file": "ForgotPassword.spec.ts",
+      "title": "ApplyForJob.spec.ts",
+      "file": "ApplyForJob.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Run All Forgot Test Cases",
-          "file": "ForgotPassword.spec.ts",
-          "line": 7,
+          "title": "Job Application Suite",
+          "file": "ApplyForJob.spec.ts",
+          "line": 20,
           "column": 6,
           "specs": [
             {
-              "title": "Verify Forgot Password with valid email",
+              "title": "move to about you Tab",
               "ok": true,
               "tags": [],
               "tests": [
@@ -85,27 +85,27 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 18,
+                      "workerIndex": 9,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 16857,
+                      "duration": 21712,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "Enter your username or email address and a link will be sent for you to reset your password\n"
+                          "text": "[\n  \u001b[32m'A little bit about you'\u001b[39m,\n  \u001b[32m'Personal Details'\u001b[39m,\n  \u001b[32m'Home Address'\u001b[39m,\n  \u001b[32m'We need a CV to consider you for this role'\u001b[39m\n]\n"
                         },
                         {
-                          "text": "Confirmation Sent\n"
+                          "text": "Please complete this application form fully and to the best of your knowledge. Unfortunately any missing information may cause a delay in your application.If you experience any technical issues when completing your application, please email our third party software provider Jobtrain support team or call them on +44 (0)1565 818 234.If you have a query or comment relating to the questions, requirements, or anything related to the recruitment process or policy then please contact the Recruitment Team on recruitment@ybs.co.uk.\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-03-24T15:42:48.821Z",
+                      "startTime": "2025-03-30T01:43:21.794Z",
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\test-results\\ForgotPassword-Run-All-For-75044-t-Password-with-valid-email-chromium\\test-finished-1.png"
+                          "path": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\test-results\\ApplyForJob-Job-Application-Suite-move-to-about-you-Tab-chromium\\test-finished-1.png"
                         }
                       ]
                     }
@@ -113,164 +113,10 @@
                   "status": "expected"
                 }
               ],
-              "id": "0b16885acaa845d75ee4-72acaa1077c7dabd1f46",
-              "file": "ForgotPassword.spec.ts",
-              "line": 9,
-              "column": 5
-            },
-            {
-              "title": "Verify the forgot Password without email",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 18,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 11511,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Enter your username or email address and a link will be sent for you to reset your password\n"
-                        },
-                        {
-                          "text": "\n                                This field needs to be a valid email\n                            \n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-03-24T15:43:07.213Z",
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\test-results\\ForgotPassword-Run-All-For-add6c-rgot-Password-without-email-chromium\\test-finished-1.png"
-                        },
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\test-results\\ForgotPassword-Run-All-For-add6c-rgot-Password-without-email-chromium\\test-finished-2.png"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "0b16885acaa845d75ee4-0f5df6a7985a33dade08",
-              "file": "ForgotPassword.spec.ts",
-              "line": 25,
-              "column": 5
-            },
-            {
-              "title": "Verify the recover username with valid mobile number from reset password page",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 18,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 16006,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-03-24T15:43:18.737Z",
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\test-results\\ForgotPassword-Run-All-For-205a6-er-from-reset-password-page-chromium\\test-finished-1.png"
-                        },
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\test-results\\ForgotPassword-Run-All-For-205a6-er-from-reset-password-page-chromium\\test-finished-2.png"
-                        },
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\test-results\\ForgotPassword-Run-All-For-205a6-er-from-reset-password-page-chromium\\test-finished-3.png"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "0b16885acaa845d75ee4-64ff71bd997fe41a3d55",
-              "file": "ForgotPassword.spec.ts",
-              "line": 43,
-              "column": 5
-            },
-            {
-              "title": "Verify the recover username without an mobile number from reset password page",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 18,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 15516,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-03-24T15:43:34.753Z",
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\test-results\\ForgotPassword-Run-All-For-92e6f-er-from-reset-password-page-chromium\\test-finished-1.png"
-                        },
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\test-results\\ForgotPassword-Run-All-For-92e6f-er-from-reset-password-page-chromium\\test-finished-2.png"
-                        },
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\test-results\\ForgotPassword-Run-All-For-92e6f-er-from-reset-password-page-chromium\\test-finished-3.png"
-                        },
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\test-results\\ForgotPassword-Run-All-For-92e6f-er-from-reset-password-page-chromium\\test-finished-4.png"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "0b16885acaa845d75ee4-76c022e90adf2749a4af",
-              "file": "ForgotPassword.spec.ts",
-              "line": 63,
-              "column": 5
+              "id": "c136ae201ff3df43295f-97eaca2d9cfa8e9bf460",
+              "file": "ApplyForJob.spec.ts",
+              "line": 48,
+              "column": 7
             }
           ]
         }
@@ -279,9 +125,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-03-24T15:42:44.187Z",
-    "duration": 66139.01600000262,
-    "expected": 4,
+    "startTime": "2025-03-30T01:43:19.155Z",
+    "duration": 24679.29799999995,
+    "expected": 1,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

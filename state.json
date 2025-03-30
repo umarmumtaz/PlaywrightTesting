@@ -2,7 +2,7 @@
   "cookies": [
     {
       "name": ".AspNetCore.Antiforgery.jI1QfjFNWzM",
-      "value": "CfDJ8GSkg20IFe1KhgBkaPOKP2t7Yxw6piAymnTa4dUD4JYyAVZCB7Omm6G9pJuk2Hxdamg_7n8M9fEiVat-TudW7-ad44bKJ89GiDG8fYkfrxeKQmNzDW8p1dLJxw6CjVKCxB8fuRBwdaEDGoATKvm93qo",
+      "value": "CfDJ8BsXJMxaNZJHpT9u7jSdk-KIq1iNktMr0UymHjVJaNg5YVVyTSWlxym1mtenLSsBek9nlU7QMV3ypkTXbG9cfHCQxYkDb3WYc2Jzdgb-j_T2dYlRKu95m7wYESSgx_tbuxpab7xof_mqvMy_IZFw53s",
       "domain": "test.jobtrain.co.uk",
       "path": "/ybscareers",
       "expires": -1,
@@ -12,7 +12,7 @@
     },
     {
       "name": ".AspNetCore.Mvc.CookieTempDataProvider",
-      "value": "CfDJ8GSkg20IFe1KhgBkaPOKP2tq-FxErDH194Pvo2ytRNGf8WKAbFhYF4Sg3gWX5bXUcr5i3-rxMn9mzdyYQZCQoHwac81Kk3Eps-c8C2w9XO4Y5zMbgsgPMgSOUKJohZ2UwykkNuUVUnkmOO4ahivZYzc",
+      "value": "CfDJ8BsXJMxaNZJHpT9u7jSdk-KBuJqewKnIwaRbrQP60ggeFtsvMbQQN11B4UhWoj5EihZ7ia_PI1ukpuUaVKGqMyzZIihotMNXC_F_uFf5hZcnUeiwR13qr4Vsk_udx3FM-v31zOgdw5SRygyllOCzkawvN2prBQrZp-U_Mf6pe89CK1TxQ7tr3e81IOCL4DvHvQ",
       "domain": "test.jobtrain.co.uk",
       "path": "/ybscareers",
       "expires": -1,
@@ -22,17 +22,17 @@
     },
     {
       "name": "_GRECAPTCHA",
-      "value": "09AP_l5mPwl2P4hcChoymxBdCEjTneJXce2m9Joe7956FHRG5tJeu1ewdToeLTHM7rnjNEokIDOBppejlx3n4B5k4",
+      "value": "09ALcxeyoYLdo47d50a2cfuQFZgzRkL9UpDh9cdBzpeH9eNhQ8s_1zBq0G5q2yY2_KC4JDDR8tny-PZNTWXP8NTS4",
       "domain": "www.google.com",
       "path": "/recaptcha",
-      "expires": 1757623722.327772,
+      "expires": 1758849059.00865,
       "httpOnly": true,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "jt.candidate.Session_2",
-      "value": "CfDJ8GSkg20IFe1KhgBkaPOKP2vVmgHiYxfwlkG%2FtZKn2HVVMv%2BHgtQCFiWkkzkD1aCDKz5iroIX0Ew%2BdoXx1PqV5Ly6DnPoYSNGVS0jtb%2FM7cUPiOWc5mIGfBHcPJeTrvA0lIcitTyqV2x6MRZucX4hh60Fmm2h4aMaFsrFlsuIhN3L",
+      "value": "CfDJ8BsXJMxaNZJHpT9u7jSdk%2BKWE1UmyvHbZI2gLNUW9%2BWjty42mMTgi%2FoSVABIlBkT6onWLu8gaC3vC%2FD54U1obtfGdf6CjUoQ7oKplnhv6husKJSDVgppYN%2FkjCJYmTAMGCjM8zNKSvthXg9k12Cajulm%2FubQOOT3OaJw70IdhSN1",
       "domain": "test.jobtrain.co.uk",
       "path": "/",
       "expires": -1,
@@ -42,50 +42,20 @@
     },
     {
       "name": "ai_user",
-      "value": "PbZWLV8E+5aRE3cplKOza4|2025-03-15T20:48:14.134Z",
+      "value": "dQO8a98++8E4DI5qVM8Ed5|2025-03-30T01:10:28.269Z",
       "domain": "test.jobtrain.co.uk",
       "path": "/",
-      "expires": 1773607694.135571,
+      "expires": 1774833028.269694,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
     },
     {
-      "name": "jt.candidate.Session_4",
-      "value": "CfDJ8GSkg20IFe1KhgBkaPOKP2sY8s4fzfENUX8GYtgPTgrQjZEtg73P5DJcWymhjmnunK5uZOY6TMLKP4cv0tyUb2dVjANGAGyU1Jktqu9C%2BHbwWCcWVz2ScfJuNyeZcFyexA%2Bo2IpqTldp8blJxigO5SW%2FLMAeyDtvJkNlbd9SCRKC",
-      "domain": "test.jobtrain.co.uk",
-      "path": "/",
-      "expires": -1,
-      "httpOnly": true,
-      "secure": true,
-      "sameSite": "Lax"
-    },
-    {
-      "name": "jt.candidate.Session_1",
-      "value": "CfDJ8GSkg20IFe1KhgBkaPOKP2tW4tydyEv2SutTPp8KATxplSvuGXGGRorNDzhSLvkoB4Rl79N%2BvIdKjxw4RhHkmw4lH8CCmrspIhjqV5ze0tpFI9vJALoos%2BclIx9Sj9Fz6t%2BmQyqt3sjuI2ldZhnloGvrab7vvwlERTsvGBAdaCa8",
-      "domain": "test.jobtrain.co.uk",
-      "path": "/",
-      "expires": -1,
-      "httpOnly": true,
-      "secure": true,
-      "sameSite": "Lax"
-    },
-    {
-      "name": "UniqueUserKey",
-      "value": "8a965cf2-9703-43ab-881d-a518767fc763",
-      "domain": "test.jobtrain.co.uk",
-      "path": "/",
-      "expires": -1,
-      "httpOnly": true,
-      "secure": true,
-      "sameSite": "Lax"
-    },
-    {
       "name": "ai_session",
-      "value": "i/FNjcSry/IutTPLhIz/4h|1742399109507|1742399845577",
+      "value": "DvWPHGUoC9DFyeqfdUonEl|1743297029027|1743297047168",
       "domain": "test.jobtrain.co.uk",
       "path": "/",
-      "expires": 1742401645.576466,
+      "expires": 1743298847.168586,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
@@ -96,12 +66,21 @@
       "origin": "https://test.jobtrain.co.uk",
       "localStorage": [
         {
-          "name": "ybscareersjobAlertParams",
-          "value": "\"{\\\"what\\\":\\\"\\\",\\\"where\\\":\\\"\\\",\\\"distance\\\":null,\\\"locationId\\\":[],\\\"department\\\":[],\\\"category\\\":[]}\""
+          "name": "_grecaptcha",
+          "value": "09ALcxeyrJ26xkBloh8AC_WUjEQoMgwih7jaRajyoZrL6uuOimnGNWH47u3vmPNrsiu78I6Csgwg0_okjXKqB7pID0U4v6xsj2koiUiQj_CsJHgCSfGr3onP1_HAMLx2TW"
+        }
+      ]
+    },
+    {
+      "origin": "https://www.google.com",
+      "localStorage": [
+        {
+          "name": "rc::a",
+          "value": "cWt1NjljMTBlemN1MQ=="
         },
         {
-          "name": "_grecaptcha",
-          "value": "09AP_l5mNPWxuMq_p8WWcYVO8Mls59ijUUtDPJgCT-TdymnAVTp2y85S_P_RCIsYujwNLOIN0ewGHJRmVtqnae0YCV2IHLGg9tMu4uWxKfnU_E-8cA-zLYH9Ci70oYjjT4"
+          "name": "rc::f",
+          "value": "0aAFA7qwUSXqTpepsC9Q3ozsh2UKxLx9WFMas_nigbheLULuF4e3VKBdszhSuXgvO9MEEBzZY"
         }
       ]
     }

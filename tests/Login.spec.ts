@@ -16,10 +16,7 @@ test.describe("Run All Login Test Cases", () => {
     // await loginPage.enterValidEmail("nanncykevin+316@gmail.com");
     // await loginPage.enterValidPassword("Testing@123");
                 //login with excel file
-    const emailPassword: any = await readFromExcel(
-      "./accountData.xlsx",
-      "Sheet1"
-    );
+    const emailPassword: any = await readFromExcel("./accountData.xlsx","Sheet1");
     console.log(emailPassword[0].email);
     //  console.log(emailPassword[0].password)
     await page.getByTestId("txt-email").fill(emailPassword[0].email);

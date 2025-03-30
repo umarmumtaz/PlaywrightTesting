@@ -53,12 +53,14 @@ export default defineConfig({
   projects: [
     {
       name: 'chromium',
-      use: { 
+      use: {
         browserName: 'chromium',
-        viewport: { width: 1280, height: 720 }
+        viewport: { width: 1280, height: 720 },
+
+
        },
     },
-  
+    
     /*
         {
           name: 'firefox',
