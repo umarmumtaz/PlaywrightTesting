@@ -21,12 +21,14 @@ test.describe("Run All Login Test Cases", () => {
     //  console.log(emailPassword[0].password)
     await page.getByTestId("txt-email").fill(emailPassword[0].email);
     await page.getByTestId("txt-password").fill(emailPassword[0].password);
-    await page.keyboard.press("Space");
+    await page.waitForLoadState('networkidle');
     await loginPage.clickOnLoginButton();
     await loginPage.verifyTheJoblistingTitle();
     await page.screenshot({
       path: "C:\\Users\\urmz\\Documents\\jobtrain documentations\\JTAutomation\\JTAutomation\\SS\\Login1.png",
       fullPage: true,
+    
+
     });
   });
   test("login with invalid email, and password", async ({ page }) => {

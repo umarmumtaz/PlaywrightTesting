@@ -58,7 +58,7 @@ console.log(headingsAboutYou)
 }
 
 async goToAboutYou(){
-   await this.page.goto("https://test.jobtrain.co.uk/ybscareers/Application/AboutYou?Jobid=20311&section=1&Stage=0&edit=1")
+   await this.page.goto("Application/AboutYou?Jobid=20311&section=1&Stage=0&edit=1")
 }
 
 async verifyThePrePopulatedFiledData (){
@@ -66,7 +66,7 @@ async verifyThePrePopulatedFiledData (){
    await expect(this.page.getByTestId('txt-txtLASTNAME')).toHaveValue('walker', { timeout: 10000 }); 
    await expect(this.page.getByTestId('txt-txtFIRSTNAME')).toHaveValue('paul', { timeout: 10000 });
    await expect(this.page.getByTestId('txt-txtMOBILE')).toHaveValue('00441172345678', { timeout: 10000 });
-   await expect(this.page.getByTestId('email-txtEMAILADDRESS')).toHaveValue('270h9bgprv@gmail.com', { timeout: 10000 });
+   //await expect(this.page.getByTestId('email-txtEMAILADDRESS')).toHaveValue('270h9bgprv@gmail.com', { timeout: 10000 }); ll be handle dynamically
 }
 async addValuesInTheFields (){
    
@@ -99,24 +99,83 @@ async addValuesInTheFields (){
 }
 
 async uploadCV(){
-   await this.page.setInputFiles('#uploadCV', 'D:/PlaywrightAutomation/JTAutomation/testingcv.pdf');
-   await expect(this.page.getByLabel('View CV (Click here to open')).toBeVisible();
+   //await this.page.getByText('Choose file').click();
+   await this.page.getByTestId('label-choose-cv-file-1').setInputFiles('D:/PlaywrightAutomation/JTAutomationLocalCS/testingcv.pdf');
+   await this.page.waitForLoadState('networkidle');
+   await expect(this.page.getByLabel('View CV (Click here to open in new window')).toBeVisible();
 }
 
-async inputValueAdd(){
-   await this.page.getByPlaceholder('Address', { exact: true }).fill('testing address');
+async fillTheBasicForm(){
+   // Define form data as an object for maintainability
+const formData = {
+   title: "Miss",
+   currentAddress: "address test1",
+   addressLine2: "address test2",
+   cityTown: "Birmingham",
+   postcode: "223366",
+   homePhone: "789456123",
+   currentSalary: "120000",
+   expectedSalary: "180000",
+   noticePeriod: "one month",
+   workRestrictions: "24 hours",
+  // dateOfBirth: { year: "2000", month: "12", day: "22" },
+   nationalInsurance: "CC12345C",
+   redCircle: "1",
+   country: "11",
+   termCounty: "UK",
+   termCountry: "3",
+   advertSource: "8",
+   foreignCountry: "Yes",
+   referredByEmployee: "Yes",
+   refEmployeeName: "indeed",
+ };
+ 
+ await this.page.getByTestId("select-txtTITLE").selectOption(formData.title);
+ await this.page.getByTestId("txt-txtCURRENTADDRESS").fill(formData.currentAddress);
+ await this.page.getByTestId("txt-txtADDRESSLINE2").fill(formData.addressLine2);
+ await this.page.getByTestId("txt-txtCITYTOWN").fill(formData.cityTown);
+ await this.page.getByTestId("txt-txtPOSTCODE").fill(formData.postcode);
+ await this.page.getByTestId("txt-txtHOMEPHONE").fill(formData.homePhone);
+ await this.page.getByRole("textbox", { name: "What is your current or what" }).fill(formData.currentSalary);
+ await this.page.getByRole("textbox", { name: "What salary or day rate are" }).fill(formData.expectedSalary);
+ await this.page.getByRole("textbox", { name: "If you are currently employed" }).fill(formData.noticePeriod);
+ await this.page.getByTestId("txtarea-Ifyouhaveanyrestrictionsinthehoursyoucanworkpleaseprovidedetailsbelow").fill(formData.workRestrictions);
+ /*
+ // Selecting Date of Birth
+ await this.page.getByTestId("txt-txtDATEOFBIRTH").click();
+ await this.page.getByRole("cell", { name: "«" }).dblclick();
+ await this.page.getByRole("cell", { name: "2000" }).nth(1).click();
+await this.page.getByText(formData.dateOfBirth.month, { exact: true }).click();
+ await this.page.getByRole("cell", { name: formData.dateOfBirth.day }).click();
+ */
+
+ // Other Form Fields
+ await this.page.getByTestId("txt-txtNIN").fill(formData.nationalInsurance);
+ await this.page.getByTestId("select-cmbRedCircle").selectOption(formData.redCircle);
+ await this.page.getByTestId("select-cmbCOUNTRY").selectOption(formData.country);
+ await this.page.getByTestId("txt-txtTERMCOUNTY").fill(formData.termCounty);
+ await this.page.getByTestId("select-cmbTERMCOUNTRY").selectOption(formData.termCountry);
+ await this.page.getByTestId("select-txtADVERT").selectOption(formData.advertSource);
+ await this.page.getByTestId("select-txtFOREIGNCOUNTRY").selectOption(formData.foreignCountry);
+ await this.page.getByTestId("select-ReferredByEmployee").selectOption(formData.referredByEmployee);
+ await this.page.getByTestId("txt-txtRef_EmployeeName").fill(formData.refEmployeeName);
+ 
+
 }
+
+
+
+
+
+
+
 
 async clickOnContinueBtn(){
 await expect (this.page.getByRole('button', { name: 'Continue' })).toBeVisible();
 await this.page.locator('#savePersnalApplicationFormBtn').click()
 }
 
-// async verifyTheTickIcon(){
 
-// await expect(this.page.locator('a.nav-link.active.show.is-valid')).toBeVisible(); 
-
-// }
 
 }
 export { ApplyApplicationAboutYouTab };

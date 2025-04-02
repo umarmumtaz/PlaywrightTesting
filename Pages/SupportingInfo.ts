@@ -8,7 +8,7 @@ class SupportingInfo{
 
 
 async goToSupportingInfo(){
-   await this.page.goto("https://test.jobtrain.co.uk/ybscareers/Application/SupportingInformation?Jobid=20311&section=4&returnUrl=8&Stage=0")
+   await this.page.goto("Application/SupportingInformation?Jobid=20311&section=4&Stage=0")
 }
 async verifyTheSupportingInfoPageHeadings(){
 await expect(this.page.getByText('References', { exact: true })).toBeVisible();
@@ -20,11 +20,8 @@ await expect(this.page.getByText('CRB')).toBeVisible();
 }
 
 async fillReferenceForm(){
-    //check the form is exist or not
-  
-const verifyTheReference = (await this.page.getByText('/ 1 References').innerText()).split(' ')
-if(verifyTheReference[0] !== verifyTheReference[2]){
-await this.page.locator('#employment').getByRole('button', { name: 'add_circle Add' }).click();
+
+await this.page.getByTestId('btn-open-emp-model-section').click();
 await this.page.getByLabel('Reference Type').selectOption('Professional');
 await this.page.getByPlaceholder('Employment Referee').fill('refree nanncy');
 await this.page.getByPlaceholder('Employer').fill('employer paul');
@@ -37,19 +34,17 @@ await this.page.getByPlaceholder('Postcode').fill('22AA30');
 await this.page.getByPlaceholder('Telephone').fill('443213213221');
 await this.page.getByPlaceholder('Email').fill('nanncykevin@gmail.com');
 await this.page.locator('#AppSection-9 label').filter({ hasText: 'Letter' }).click();
-await this.page.locator('#saveReferenceFormTab').click();}
+await this.page.locator('#saveReferenceFormTab').click();
 }
 
 async uploadDocument(){
-await this.page.getByRole('button', { name: 'add_circle Add' }).nth(1).click();
-await this.page.setInputFiles('#additionalFileUploadOptions-passport-1 label', 'D:/PlaywrightAutomation/JTAutomation/testingcv.pdf')
-    
+   await this.page.getByTestId('label-choose-multi-doc-1').setInputFiles('D:/PlaywrightAutomation/JTAutomationLocalCS/testingcv.pdf');
 }
 async uploadCoverLetter(){
-        await this.page.setInputFiles('#uploadDocs', 'D:/PlaywrightAutomation/JTAutomation/testingcv.pdf');
-        await expect (this.page.getByLabel('View Cover Letter (Click here')).toBeVisible();
+    await this.page.getByTestId('label-choose-cover-letter-0').setInputFiles('D:/PlaywrightAutomation/JTAutomationLocalCS/testingcv.pdf');
+    await expect (this.page.getByLabel('View Cover Letter (Click here to open in new window')).toBeVisible();
     }
-    
+
    async verifyTheAddionalInfo(){
 await this.page.getByLabel('Influencing, communication').fill('its a dummy text for field verification');
 await this.page.getByLabel('Analysis, problem solving and').fill('its a dummy text for field verification');
@@ -68,6 +63,7 @@ await this.page.getByRole('button', { name: 'Continue' }).click();
 await this.page.waitForTimeout(7000);
     }
 
+/*
 
 async completeAssessmentFromA(){
 this.page.locator('label').filter({ hasText: 'YEs' }).check();
@@ -95,7 +91,7 @@ await this.page.getByRole('button', { name: 'Continue' }).click();
 
 
 
-
+*/
 
 }
 export { SupportingInfo };

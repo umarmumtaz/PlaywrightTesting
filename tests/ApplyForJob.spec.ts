@@ -1,9 +1,11 @@
 
 import { test, expect } from "@playwright/test";
 import { ApplyForJob } from "../Pages/ApplyForJob";
+import { SupportingInfo } from "../Pages/SupportingInfo";
 import { ApplyApplicationAboutYouTab } from "../Pages/ApplyApplicationAboutYouTab";
 import * as xlsx from "xlsx"; // Import the xlsx library
 import { LoginPage } from "../Pages/LoginPage";
+
 // Function to read data from Excel
 function readFromExcel(filePath: string, sheetName: string) {
   const workbook = xlsx.readFile(filePath);
@@ -54,6 +56,34 @@ test.describe('Job Application Suite', () => {
   });
 
 
+test("About You - Upload the CV", async ({ page }) => {
+  // Step 3: Perform the application process
+  const applyApplicationAboutYouTab = new ApplyApplicationAboutYouTab(page);
+ await applyApplicationAboutYouTab.goToAboutYou();
+ await applyApplicationAboutYouTab.verifyThePrePopulatedFiledData();
+ await applyApplicationAboutYouTab.fillTheBasicForm();
+ await page.waitForLoadState('networkidle');
+ await applyApplicationAboutYouTab.uploadCV();
+ });
+
+ test("Fulfill the supporting info form", async ({ page }) => {
+  const supportingInfo = new SupportingInfo(page);
+  await supportingInfo.goToSupportingInfo();
+  await supportingInfo.verifyTheSupportingInfoPageHeadings();
+  await supportingInfo.fillReferenceForm();
+  await supportingInfo.uploadDocument();
+  await page.waitForLoadState('networkidle');
+ await supportingInfo.uploadCoverLetter();
+ await page.waitForLoadState('networkidle');
+ await supportingInfo.verifyTheAddionalInfo();
+ await page.waitForLoadState('networkidle');
+ await supportingInfo.verifyTheCrbFrom();
+//fulfill the equal ops form
+//await supportingInfo.completeAssessmentFromA(); //there is an issue
+//await supportingInfo.completeEqualOppsForm();
+});
+
+
 });
 
 
@@ -67,4 +97,6 @@ test.describe('Job Application Suite', () => {
 //others tab created one, like first complete this one about you
 //then move to next tab using the url with session storage like that
 //how to use tags in playwright for smoke/regression/others
-//
+//login common helper or utils 
+//tagging how to use it
+//hopw to use the different tabs like channing or linking

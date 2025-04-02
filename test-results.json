@@ -69,12 +69,12 @@
         {
           "title": "Job Application Suite",
           "file": "ApplyForJob.spec.ts",
-          "line": 20,
+          "line": 18,
           "column": 6,
           "specs": [
             {
-              "title": "move to about you Tab",
-              "ok": true,
+              "title": "Fulfill the supporting info form",
+              "ok": false,
               "tags": [],
               "tests": [
                 {
@@ -85,38 +85,55 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 9,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 21712,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "[\n  \u001b[32m'A little bit about you'\u001b[39m,\n  \u001b[32m'Personal Details'\u001b[39m,\n  \u001b[32m'Home Address'\u001b[39m,\n  \u001b[32m'We need a CV to consider you for this role'\u001b[39m\n]\n"
+                      "status": "failed",
+                      "duration": 221475,
+                      "error": {
+                        "message": "Error: locator.setInputFiles: Error: Node is not an HTMLInputElement\nCall log:\n\u001b[2m  - waiting for getByText('Cookie PolicyBy clicking \"')\u001b[22m\n\u001b[2m    - locator resolved to <body class=\"theme-default bg-black application-supportinginformation\">…</body>\u001b[22m\n",
+                        "stack": "Error: locator.setInputFiles: Error: Node is not an HTMLInputElement\nCall log:\n\u001b[2m  - waiting for getByText('Cookie PolicyBy clicking \"')\u001b[22m\n\u001b[2m    - locator resolved to <body class=\"theme-default bg-black application-supportinginformation\">…</body>\u001b[22m\n\n    at SupportingInfo.uploadDocument (D:\\PlaywrightAutomation\\JTAutomationLocalCS\\Pages\\SupportingInfo.ts:43:5)\n    at D:\\PlaywrightAutomation\\JTAutomationLocalCS\\tests\\ApplyForJob.spec.ts:74:3",
+                        "location": {
+                          "file": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\Pages\\SupportingInfo.ts",
+                          "column": 5,
+                          "line": 43
                         },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\Pages\\SupportingInfo.ts:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m    \u001b[90m// await this.page.getByTestId('btn-add-multi-doc-1').click();\u001b[39m\n \u001b[90m 42 |\u001b[39m    \u001b[90m// await this.page.getByTestId('label-choose-multi-doc-1').getByText('Choose file').click();\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m    \u001b[90m// await this.page.getByText('Cookie PolicyBy clicking \"').setInputFiles('D:/PlaywrightAutomation/JTAutomationLocalCS/testingcv.pdf');\u001b[39m\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m    \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'label-choose-multi-doc-1'\u001b[39m)\u001b[33m.\u001b[39msetInputFiles(\u001b[32m'D:/PlaywrightAutomation/JTAutomationLocalCS/testingcv.pdf'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m }\n \u001b[90m 46 |\u001b[39m \u001b[36masync\u001b[39m uploadCoverLetter(){\u001b[0m"
+                      },
+                      "errors": [
                         {
-                          "text": "Please complete this application form fully and to the best of your knowledge. Unfortunately any missing information may cause a delay in your application.If you experience any technical issues when completing your application, please email our third party software provider Jobtrain support team or call them on +44 (0)1565 818 234.If you have a query or comment relating to the questions, requirements, or anything related to the recruitment process or policy then please contact the Recruitment Team on recruitment@ybs.co.uk.\n"
+                          "location": {
+                            "file": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\Pages\\SupportingInfo.ts",
+                            "column": 5,
+                            "line": 43
+                          },
+                          "message": "Error: locator.setInputFiles: Error: Node is not an HTMLInputElement\nCall log:\n\u001b[2m  - waiting for getByText('Cookie PolicyBy clicking \"')\u001b[22m\n\u001b[2m    - locator resolved to <body class=\"theme-default bg-black application-supportinginformation\">…</body>\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\Pages\\SupportingInfo.ts:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m    \u001b[90m// await this.page.getByTestId('btn-add-multi-doc-1').click();\u001b[39m\n \u001b[90m 42 |\u001b[39m    \u001b[90m// await this.page.getByTestId('label-choose-multi-doc-1').getByText('Choose file').click();\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m    \u001b[90m// await this.page.getByText('Cookie PolicyBy clicking \"').setInputFiles('D:/PlaywrightAutomation/JTAutomationLocalCS/testingcv.pdf');\u001b[39m\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m    \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'label-choose-multi-doc-1'\u001b[39m)\u001b[33m.\u001b[39msetInputFiles(\u001b[32m'D:/PlaywrightAutomation/JTAutomationLocalCS/testingcv.pdf'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m }\n \u001b[90m 46 |\u001b[39m \u001b[36masync\u001b[39m uploadCoverLetter(){\u001b[0m\n\u001b[2m    at SupportingInfo.uploadDocument (D:\\PlaywrightAutomation\\JTAutomationLocalCS\\Pages\\SupportingInfo.ts:43:5)\u001b[22m\n\u001b[2m    at D:\\PlaywrightAutomation\\JTAutomationLocalCS\\tests\\ApplyForJob.spec.ts:74:3\u001b[22m"
                         }
                       ],
+                      "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-03-30T01:43:21.794Z",
+                      "startTime": "2025-04-02T04:28:41.171Z",
                       "attachments": [
                         {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\test-results\\ApplyForJob-Job-Application-Suite-move-to-about-you-Tab-chromium\\test-finished-1.png"
+                          "name": "_prompt-0",
+                          "contentType": "text/markdown",
+                          "body": "IyBJbnN0cnVjdGlvbnMKCi0gRm9sbG93aW5nIFBsYXl3cmlnaHQgdGVzdCBmYWlsZWQuCi0gRXhwbGFpbiB3aHksIGJlIGNvbmNpc2UsIHJlc3BlY3QgUGxheXdyaWdodCBiZXN0IHByYWN0aWNlcy4KLSBQcm92aWRlIGEgc25pcHBldCBvZiBjb2RlIHdpdGggdGhlIGZpeCwgaWYgcG9zc2libGUuCgojIFRlc3QgaW5mbwoKLSBOYW1lOiBKb2IgQXBwbGljYXRpb24gU3VpdGUgPj4gRnVsZmlsbCB0aGUgc3VwcG9ydGluZyBpbmZvIGZvcm0KLSBMb2NhdGlvbjogRDpcUGxheXdyaWdodEF1dG9tYXRpb25cSlRBdXRvbWF0aW9uTG9jYWxDU1x0ZXN0c1xBcHBseUZvckpvYi5zcGVjLnRzOjY5OjYKCiMgRXJyb3IgZGV0YWlscwoKYGBgCkVycm9yOiBsb2NhdG9yLnNldElucHV0RmlsZXM6IEVycm9yOiBOb2RlIGlzIG5vdCBhbiBIVE1MSW5wdXRFbGVtZW50CkNhbGwgbG9nOgogIC0gd2FpdGluZyBmb3IgZ2V0QnlUZXh0KCdDb29raWUgUG9saWN5QnkgY2xpY2tpbmcgIicpCiAgICAtIGxvY2F0b3IgcmVzb2x2ZWQgdG8gPGJvZHkgY2xhc3M9InRoZW1lLWRlZmF1bHQgYmctYmxhY2sgYXBwbGljYXRpb24tc3VwcG9ydGluZ2luZm9ybWF0aW9uIj7igKY8L2JvZHk+CgogICAgYXQgU3VwcG9ydGluZ0luZm8udXBsb2FkRG9jdW1lbnQgKEQ6XFBsYXl3cmlnaHRBdXRvbWF0aW9uXEpUQXV0b21hdGlvbkxvY2FsQ1NcUGFnZXNcU3VwcG9ydGluZ0luZm8udHM6NDM6NSkKICAgIGF0IEQ6XFBsYXl3cmlnaHRBdXRvbWF0aW9uXEpUQXV0b21hdGlvbkxvY2FsQ1NcdGVzdHNcQXBwbHlGb3JKb2Iuc3BlYy50czo3NDozCmBgYAoKIyBUZXN0IHNvdXJjZQoKYGBgdHMKICAgMSB8IGltcG9ydCB7IGV4cGVjdCB9IGZyb20gIkBwbGF5d3JpZ2h0L3Rlc3QiOwogICAyIHwgaW1wb3J0IHsgUGFnZSwgQnJvd3NlckNvbnRleHQgfSBmcm9tICJwbGF5d3JpZ2h0IjsKICAgMyB8CiAgIDQgfCBjbGFzcyBTdXBwb3J0aW5nSW5mb3sKICAgNSB8ICAgY29uc3RydWN0b3IocHVibGljIHBhZ2U6IFBhZ2UpIHsKICAgNiB8ICAgfQogICA3IHwKICAgOCB8CiAgIDkgfAogICAxMCB8IGFzeW5jIGdvVG9TdXBwb3J0aW5nSW5mbygpewogICAxMSB8ICAgIGF3YWl0IHRoaXMucGFnZS5nb3RvKCJBcHBsaWNhdGlvbi9TdXBwb3J0aW5nSW5mb3JtYXRpb24/Sm9iaWQ9MjAzMTEmc2VjdGlvbj00JlN0YWdlPTAiKQogICAxMiB8IH0KICAgMTMgfCBhc3luYyB2ZXJpZnlUaGVTdXBwb3J0aW5nSW5mb1BhZ2VIZWFkaW5ncygpewogICAxNCB8IGF3YWl0IGV4cGVjdCh0aGlzLnBhZ2UuZ2V0QnlUZXh0KCdSZWZlcmVuY2VzJywgeyBleGFjdDogdHJ1ZSB9KSkudG9CZVZpc2libGUoKTsKICAgMTUgfCBhd2FpdCBleHBlY3QodGhpcy5wYWdlLmdldEJ5VGV4dCgnTXVsdGkgVXBsb2FkcycpKS50b0JlVmlzaWJsZSgpOwogICAxNiB8IGF3YWl0IGV4cGVjdCh0aGlzLnBhZ2UuZ2V0QnlSb2xlKCdoZWFkaW5nJywgeyBuYW1lOiAnVXBsb2FkIERvY3VtZW50cyBjaGVja19jaXJjbGUnIH0pKS50b0JlVmlzaWJsZSgpOwogICAxNyB8IGF3YWl0IGV4cGVjdCh0aGlzLnBhZ2UuZ2V0QnlSb2xlKCdoZWFkaW5nJywgeyBuYW1lOiAnQ292ZXIgbGV0dGVyIHRvIHVwbG9hZCcgfSkpLnRvQmVWaXNpYmxlKCk7CiAgIDE4IHwgYXdhaXQgZXhwZWN0KHRoaXMucGFnZS5nZXRCeVRleHQoJ0FkZGl0aW9uYWwgSW5mbycsIHsgZXhhY3Q6IHRydWUgfSkpLnRvQmVWaXNpYmxlKCk7CiAgIDE5IHwgYXdhaXQgZXhwZWN0KHRoaXMucGFnZS5nZXRCeVRleHQoJ0NSQicpKS50b0JlVmlzaWJsZSgpOwogICAyMCB8IH0KICAgMjEgfAogICAyMiB8IGFzeW5jIGZpbGxSZWZlcmVuY2VGb3JtKCl7CiAgIDIzIHwKICAgMjQgfCBhd2FpdCB0aGlzLnBhZ2UuZ2V0QnlUZXN0SWQoJ2J0bi1vcGVuLWVtcC1tb2RlbC1zZWN0aW9uJykuY2xpY2soKTsKICAgMjUgfCBhd2FpdCB0aGlzLnBhZ2UuZ2V0QnlMYWJlbCgnUmVmZXJlbmNlIFR5cGUnKS5zZWxlY3RPcHRpb24oJ1Byb2Zlc3Npb25hbCcpOwogICAyNiB8IGF3YWl0IHRoaXMucGFnZS5nZXRCeVBsYWNlaG9sZGVyKCdFbXBsb3ltZW50IFJlZmVyZWUnKS5maWxsKCdyZWZyZWUgbmFubmN5Jyk7CiAgIDI3IHwgYXdhaXQgdGhpcy5wYWdlLmdldEJ5UGxhY2Vob2xkZXIoJ0VtcGxveWVyJykuZmlsbCgnZW1wbG95ZXIgcGF1bCcpOwogICAyOCB8IGF3YWl0IHRoaXMucGFnZS5nZXRCeVBsYWNlaG9sZGVyKCdSZWZlcmVlIGZhbWlseSBuYW1lJykuZmlsbCgncmVmZXJlZSBmYW1pbHkgbmF2aW4nKTsKICAgMjkgfCBhd2FpdCB0aGlzLnBhZ2UuZ2V0QnlQbGFjZWhvbGRlcignUG9zaXRpb24nKS5maWxsKCdTUUEnKTsKICAgMzAgfCBhd2FpdCB0aGlzLnBhZ2UuZ2V0QnlQbGFjZWhvbGRlcignQWRkcmVzcycsIHsgZXhhY3Q6IHRydWUgfSkuZmlsbCgnTEEsIFdBU0gnKTsKICAgMzEgfCBhd2FpdCB0aGlzLnBhZ2UuZ2V0QnlQbGFjZWhvbGRlcignQ2l0eS9Ub3duJykuZmlsbCgnQmlybWluZ2hhbScpOwogICAzMiB8IGF3YWl0IHRoaXMucGFnZS5nZXRCeVBsYWNlaG9sZGVyKCdDb3VudHknKS5maWxsKCdVSycpOwogICAzMyB8IGF3YWl0IHRoaXMucGFnZS5nZXRCeVBsYWNlaG9sZGVyKCdQb3N0Y29kZScpLmZpbGwoJzIyQUEzMCcpOwogICAzNCB8IGF3YWl0IHRoaXMucGFnZS5nZXRCeVBsYWNlaG9sZGVyKCdUZWxlcGhvbmUnKS5maWxsKCc0NDMyMTMyMTMyMjEnKTsKICAgMzUgfCBhd2FpdCB0aGlzLnBhZ2UuZ2V0QnlQbGFjZWhvbGRlcignRW1haWwnKS5maWxsKCduYW5uY3lrZXZpbkBnbWFpbC5jb20nKTsKICAgMzYgfCBhd2FpdCB0aGlzLnBhZ2UubG9jYXRvcignI0FwcFNlY3Rpb24tOSBsYWJlbCcpLmZpbHRlcih7IGhhc1RleHQ6ICdMZXR0ZXInIH0pLmNsaWNrKCk7CiAgIDM3IHwgYXdhaXQgdGhpcy5wYWdlLmxvY2F0b3IoJyNzYXZlUmVmZXJlbmNlRm9ybVRhYicpLmNsaWNrKCk7CiAgIDM4IHwgfQogICAzOSB8CiAgIDQwIHwgYXN5bmMgdXBsb2FkRG9jdW1lbnQoKXsKICAgNDEgfCAgICAvLyBhd2FpdCB0aGlzLnBhZ2UuZ2V0QnlUZXN0SWQoJ2J0bi1hZGQtbXVsdGktZG9jLTEnKS5jbGljaygpOwogICA0MiB8ICAgIC8vIGF3YWl0IHRoaXMucGFnZS5nZXRCeVRlc3RJZCgnbGFiZWwtY2hvb3NlLW11bHRpLWRvYy0xJykuZ2V0QnlUZXh0KCdDaG9vc2UgZmlsZScpLmNsaWNrKCk7Cj4gIDQzIHwgICAgLy8gYXdhaXQgdGhpcy5wYWdlLmdldEJ5VGV4dCgnQ29va2llIFBvbGljeUJ5IGNsaWNraW5nICInKS5zZXRJbnB1dEZpbGVzKCdEOi9QbGF5d3JpZ2h0QXV0b21hdGlvbi9KVEF1dG9tYXRpb25Mb2NhbENTL3Rlc3Rpbmdjdi5wZGYnKTsKICAgICAgfCAgICAgXiBFcnJvcjogbG9jYXRvci5zZXRJbnB1dEZpbGVzOiBFcnJvcjogTm9kZSBpcyBub3QgYW4gSFRNTElucHV0RWxlbWVudAogICA0NCB8ICAgIGF3YWl0IHRoaXMucGFnZS5nZXRCeVRlc3RJZCgnbGFiZWwtY2hvb3NlLW11bHRpLWRvYy0xJykuc2V0SW5wdXRGaWxlcygnRDovUGxheXdyaWdodEF1dG9tYXRpb24vSlRBdXRvbWF0aW9uTG9jYWxDUy90ZXN0aW5nY3YucGRmJyk7CiAgIDQ1IHwgfQogICA0NiB8IGFzeW5jIHVwbG9hZENvdmVyTGV0dGVyKCl7CiAgIDQ3IHwgICAgIGF3YWl0IHRoaXMucGFnZS5nZXRCeVRlc3RJZCgnbGFiZWwtY2hvb3NlLWNvdmVyLWxldHRlci0wJykuc2V0SW5wdXRGaWxlcygnRDovUGxheXdyaWdodEF1dG9tYXRpb24vSlRBdXRvbWF0aW9uTG9jYWxDUy90ZXN0aW5nY3YucGRmJyk7CiAgIDQ4IHwgICAgIGF3YWl0IGV4cGVjdCAodGhpcy5wYWdlLmdldEJ5TGFiZWwoJ1ZpZXcgQ292ZXIgTGV0dGVyIChDbGljayBoZXJlIHRvIG9wZW4gaW4gbmV3IHdpbmRvdycpKS50b0JlVmlzaWJsZSgpOwogICA0OSB8ICAgICB9CiAgIDUwIHwKICAgNTEgfCAgICBhc3luYyB2ZXJpZnlUaGVBZGRpb25hbEluZm8oKXsKICAgNTIgfCBhd2FpdCB0aGlzLnBhZ2UuZ2V0QnlMYWJlbCgnSW5mbHVlbmNpbmcsIGNvbW11bmljYXRpb24nKS5maWxsKCdpdHMgYSBkdW1teSB0ZXh0IGZvciBmaWVsZCB2ZXJpZmljYXRpb24nKTsKICAgNTMgfCBhd2FpdCB0aGlzLnBhZ2UuZ2V0QnlMYWJlbCgnQW5hbHlzaXMsIHByb2JsZW0gc29sdmluZyBhbmQnKS5maWxsKCdpdHMgYSBkdW1teSB0ZXh0IGZvciBmaWVsZCB2ZXJpZmljYXRpb24nKTsKICAgNTQgfCBhd2FpdCB0aGlzLnBhZ2UuZ2V0QnlMYWJlbCgnQ2FyZWVyIENob2ljZScpLmZpbGwoJ2l0cyBhIGR1bW15IHRleHQgZm9yIGZpZWxkIHZlcmlmaWNhdGlvbicpOwogICA1NSB8IGF3YWl0IHRoaXMucGFnZS5nZXRCeUxhYmVsKCdTcGVjaWZpYyBTa2lsbHMnKS5maWxsKCdpdHMgYSBkdW1teSB0ZXh0IGZvciBmaWVsZCB2ZXJpZmljYXRpb24nKTsKICAgNTYgfCBhd2FpdCB0aGlzLnBhZ2UuZ2V0QnlMYWJlbCgnQWRkaXRpb25hbCBJbmZvcm1hdGlvbicpLmZpbGwoJ2l0cyBhIGR1bW15IHRleHQgZm9yIGZpZWxkIHZlcmlmaWNhdGlvbicpOwogICA1NyB8IGF3YWl0IHRoaXMucGFnZS5nZXRCeUxhYmVsKCdJbnRlcmVzdHMnKS5maWxsKCdpdHMgYSBkdW1teSB0ZXh0IGZvciBmaWVsZCB2ZXJpZmljYXRpb24nKTsKICAgNTggfCAgICB9CiAgIDU5IHwgIAogICA2MCB8ICAgICBhc3luYyB2ZXJpZnlUaGVDcmJGcm9tKCl7CiAgIDYxIHwgYXdhaXQgdGhpcy5wYWdlLmdldEJ5TGFiZWwoJ0Rpc2Nsb3N1cmUnLCB7IGV4YWN0OiB0cnVlIH0pLnNlbGVjdE9wdGlvbignWWVzJyk7CiAgIDYyIHwgYXdhaXQgdGhpcy5wYWdlLmdldEJ5TGFiZWwoJ0NPTlZJQ1RFRCcpLnNlbGVjdE9wdGlvbignWWVzJyk7CiAgIDYzIHwgYXdhaXQgdGhpcy5wYWdlLmdldEJ5TGFiZWwoJ0NPVVJUIEFQUEVBUkFOQ0UnKS5zZWxlY3RPcHRpb24oJ1llcycpOwogICA2NCB8IGF3YWl0IHRoaXMucGFnZS5nZXRCeVBsYWNlaG9sZGVyKCdWRVRUSU5HIEJBTktSVVBUQ1knKS5maWxsKCd2ZXR0aW5nIGJhbmtydXB0JykKICAgNjUgfCBhd2FpdCB0aGlzLnBhZ2UuZ2V0QnlSb2xlKCdidXR0b24nLCB7IG5hbWU6ICdDb250aW51ZScgfSkuY2xpY2soKTsKICAgNjYgfCBhd2FpdCB0aGlzLnBhZ2Uud2FpdEZvclRpbWVvdXQoNzAwMCk7CiAgIDY3IHwgICAgIH0KICAgNjggfAogICA2OSB8IC8qCiAgIDcwIHwKICAgNzEgfCBhc3luYyBjb21wbGV0ZUFzc2Vzc21lbnRGcm9tQSgpewogICA3MiB8IHRoaXMucGFnZS5sb2NhdG9yKCdsYWJlbCcpLmZpbHRlcih7IGhhc1RleHQ6ICdZRXMnIH0pLmNoZWNrKCk7CiAgIDczIHwgdGhpcy5wYWdlLmxvY2F0b3IoJ2xhYmVsJykuZmlsdGVyKHsgaGFzVGV4dDogJ01vcm5pbmcnIH0pLmNoZWNrKCk7CiAgIDc0IHwgLy9nZXRCeVJvbGUoJ2dyb3VwJywgeyBuYW1lOiAnMykgUmVhcnJhbmdlIHRoZSBmb2xsb3dpbmcnIH0pLmxvY2F0b3IoJ2xhYmVsJykubnRoKDEpCiAgIDc1IHwgdGhpcy5wYWdlLmdldEJ5UGxhY2Vob2xkZXIoJ0Fuc3dlciBoZXJlLi4uJykuZmlsbCgndGVzdGluZyB0aGUgcXVlc3Rpb24nKTsKICAgNzYgfCB0aGlzLnBhZ2UubG9jYXRvcignLmN1c3RvbS1jb250cm9sLWxhYmVsJykuZmlyc3QoKS5jaGVjaygpOwogICA3NyB8IC8vdGhpcy5wYWdlLmdldEJ5Um9sZSgnYnV0dG9uJywgeyBuYW1lOiAnU2F2ZSBhbmQgQ29udGludWUnIH0pLmNsaWNrKCk7CiAgIDc4IHwgfQogICA3OSB8CiAgIDgwIHwgYXN5bmMgZ29Ub0VxdWFsT3Bwc0Zvcm0oKXsKICAgODEgfCAgICAgYXdhaXQgdGhpcy5wYWdlLmdvdG8oImh0dHBzOi8vdGVzdC5qb2J0cmFpbi5jby51ay95YnNjYXJlZXJzL0FwcGxpY2F0aW9uL0VxdWFsT3Bwb3J0dW5pdGllcz9Kb2JpZD0yMDMxMSZzZWN0aW9uPTUmU3RhZ2U9MCIpCiAgIDgyIHwgIH0KICAgODMgfAogICA4NCB8CiAgIDg1IHwKICAgODYgfCBhc3luYyBjb21wbGV0ZUVxdWFsT3Bwc0Zvcm0oKXsKICAgODcgfCBhd2FpdCB0aGlzLnBhZ2UuZ2V0QnlMYWJlbCgnV2hhdCBpcyB5b3VyIGV0aG5pY2l0eT8nKS5zZWxlY3RPcHRpb24oJ0FzaWFuIC8gQXNpYW4gQnJpdGlzaCcpCiAgIDg4IHwgYXdhaXQgdGhpcy5wYWdlLmdldEJ5TGFiZWwoJ0dlbmRlcicpLnNlbGVjdE9wdGlvbignTWFsZScpOwogICA4OSB8IGF3YWl0IHRoaXMucGFnZS5nZXRCeVBsYWNlaG9sZGVyKCdOYXRpb25hbCBJbnN1cmFuY2UgTnVtYmVyICjigJgnKS5maWxsKCdBQTIzNDUyMzRBJyk7CiAgIDkwIHwgYXdhaXQgdGhpcy5wYWdlLmxvY2F0b3IoJ2Zvcm0gZGl2JykuZmlsdGVyKHsgaGFzVGV4dDogJ0dlbmRlciBmb3IgSE1SQyBQbGVhc2UgU2VsZWN0JyB9KS5nZXRCeVJvbGUoJ2NvbWJvYm94Jykuc2VsZWN0T3B0aW9uKCdNJyk7CiAgIDkxIHwgYXdhaXQgdGhpcy5wYWdlLmdldEJ5Um9sZSgnYnV0dG9uJywgeyBuYW1lOiAnQ29udGludWUnIH0pLmNsaWNrKCk7CiAgIDkyIHwgfQogICA5MyB8CiAgIDk0IHwKICAgOTUgfAogICA5NiB8CiAgIDk3IHwgKi8KICAgOTggfAogICA5OSB8IH0KICAxMDAgfCBleHBvcnQgeyBTdXBwb3J0aW5nSW5mbyB9OwogIDEwMSB8CiAgMTAyIHwgLy9zYXZlIHJlZ2lzdGVyIGluIHRoZSBleGNlbCBhbmQgZ2V0IGFuZCBjcm9zcyBjaGVjayB3aXRoIGZyb20gdGhlIHByb2ZpbGVzCiAgMTAzIHwgLy9ob3cgdG8gZ2V0IGRhdGUgZnJvbSBkYXRlIHBpY2tlcgogIDEwNCB8IC8vaXNzdWVzIGluIEFzc2Vzc21lbnQgZm9ybSBhL2IKICAxMDUgfCAvL2hvdyB0byBjb25uZWN0IHRoZSB0ZXN0IGNhc2VzIHdpdGggb3RoZXJzCiAgMTA2IHwgLy8gY3JlYXRlIHRoZSBmbG93IGFuZCB0aGVuIGNoZWNrIHdpdGggbG9naW4gYW5kIHdpdGhvdXQgbG9naW4gZXRjIGFsbCBmbG93cwpgYGA="
                         }
-                      ]
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\PlaywrightAutomation\\JTAutomationLocalCS\\Pages\\SupportingInfo.ts",
+                        "column": 5,
+                        "line": 43
+                      }
                     }
                   ],
-                  "status": "expected"
+                  "status": "unexpected"
                 }
               ],
-              "id": "c136ae201ff3df43295f-97eaca2d9cfa8e9bf460",
+              "id": "c136ae201ff3df43295f-5c0c1acfb44dcb8e45bb",
               "file": "ApplyForJob.spec.ts",
-              "line": 48,
-              "column": 7
+              "line": 69,
+              "column": 6
             }
           ]
         }
@@ -125,11 +142,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-03-30T01:43:19.155Z",
-    "duration": 24679.29799999995,
-    "expected": 1,
+    "startTime": "2025-04-02T04:28:35.294Z",
+    "duration": 227575.382,
+    "expected": 0,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }
